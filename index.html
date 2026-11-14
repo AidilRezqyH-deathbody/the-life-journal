@@ -1,0 +1,1627 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Life Journal, Aidil's Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- CERTIFICATE LIGHTBOX -->
+<div
+    class="certificate-lightbox"
+    id="certificate-lightbox"
+    aria-hidden="true"
+>
+
+    <button
+        type="button"
+        class="lightbox-close"
+        id="lightbox-close"
+        aria-label="Close certificate"
+        data-i18n-aria-label="closeCertificate"
+    >
+        &times;
+    </button>
+
+    <div class="lightbox-content">
+
+        <p class="lightbox-label" data-i18n="certificateLabel">
+            ACHIEVEMENT CERTIFICATE
+        </p>
+
+        <img
+            src=""
+            alt=""
+            id="lightbox-certificate-image"
+        >
+
+        <p
+            class="lightbox-caption"
+            data-i18n="certificateCaption"
+        >
+            National Essay & Quiz Competition — 3rd Place
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen" class="loading-screen">
+    <div class="loading-content">
+
+        <p class="loading-subtitle" data-i18n="loadingWelcome">
+            WELCOME TO
+        </p>
+
+        <h1 class="loading-title">THE LIFE JOURNAL</h1>
+
+        <div class="loading-bar">
+            <div id="loading-progress" class="loading-progress"></div>
+        </div>
+
+        <p id="loading-text" class="loading-text">
+            Preparing your journey... 0%
+        </p>
+
+    </div>
+</div>
+
+
+<!-- MAIN MENU -->
+<main id="main-menu" class="main-menu">
+
+    <!-- NIGHT SKY DECORATION -->
+    <div class="menu-atmosphere" aria-hidden="true">
+
+        <!-- SHOOTING STARS -->
+        <div class="shooting-star shooting-star-one"></div>
+        <div class="shooting-star shooting-star-two"></div>
+
+        <!-- DISTANT LANDSCAPE -->
+        <div class="distant-hills" aria-hidden="true">
+            <div class="hill hill-one"></div>
+            <div class="hill hill-two"></div>
+        </div>
+
+        <!-- PIXEL GROUND -->
+        <div class="pixel-ground">
+            <div class="ground-grass"></div>
+        </div>
+
+        <div class="night-moon"></div>
+
+        <div class="star-layer"></div>
+
+        <div class="ground-details" aria-hidden="true">
+            <span class="ground-spark spark-one"></span>
+            <span class="ground-spark spark-two"></span>
+            <span class="ground-spark spark-three"></span>
+            <span class="ground-spark spark-four"></span>
+            <span class="ground-spark spark-five"></span>
+        </div>
+
+        <!-- STAR SPARKLES -->
+        <div class="star-sparkle sparkle-one"></div>
+        <div class="star-sparkle sparkle-two"></div>
+        <div class="star-sparkle sparkle-three"></div>
+        <div class="star-sparkle sparkle-four"></div>
+
+        <!-- CONSTELLATIONS -->
+        <div class="constellation constellation-ursa">
+            <svg viewBox="0 0 220 130" aria-hidden="true">
+                <polyline points="20,95 65,65 105,75 145,40 185,20 195,75 145,95 105,75"
+                    class="constellation-lines"/>
+
+                <circle cx="20" cy="95" r="3"/>
+                <circle cx="65" cy="65" r="3.5"/>
+                <circle cx="105" cy="75" r="3"/>
+                <circle cx="145" cy="40" r="4"/>
+                <circle cx="185" cy="20" r="3"/>
+                <circle cx="195" cy="75" r="3"/>
+                <circle cx="145" cy="95" r="3"/>
+            </svg>
+        </div>
+
+        <div class="constellation constellation-cassiopeia">
+            <svg viewBox="0 0 160 90" aria-hidden="true">
+                <polyline points="10,65 45,20 80,55 115,15 150,60"
+                    class="constellation-lines"/>
+
+                <circle cx="10" cy="65" r="3"/>
+                <circle cx="45" cy="20" r="3.5"/>
+                <circle cx="80" cy="55" r="3"/>
+                <circle cx="115" cy="15" r="3.5"/>
+                <circle cx="150" cy="60" r="3"/>
+            </svg>
+        </div>
+
+        <div class="firefly firefly-one"></div>
+        <div class="firefly firefly-two"></div>
+        <div class="firefly firefly-three"></div>
+        <div class="firefly firefly-four"></div>
+
+    </div>
+
+    <div class="menu-content">
+
+        <p class="menu-subtitle" data-i18n="subtitle">
+            A JOURNEY THROUGH LIFE
+        </p>
+
+        <h1 class="game-title">
+            THE LIFE JOURNAL
+        </h1>
+
+        <p class="portfolio-name">
+            Aidil's Personal Portfolio
+        </p>
+
+        <!-- PIXEL CHARACTER -->
+        <video
+            class="menu-character"
+            autoplay
+            muted
+            loop
+            playsinline
+            aria-hidden="true"
+        >
+            <source src="assets/videos/main-pixel-character.mp4" type="video/mp4">
+        </video>
+
+        <div class="menu-buttons">
+
+            <button id="start-button" class="btn start-btn" data-i18n="start">
+                START JOURNEY
+            </button>
+
+            <button id="settings-button" class="btn settings-btn" data-i18n="settings">
+                SETTINGS
+            </button>
+
+        </div>
+
+        <p class="menu-footer" data-i18n="footer">
+            © 2026 — A PERSONAL JOURNEY
+        </p>
+
+    </div>
+
+</main>
+
+
+<!-- SETTINGS PANEL -->
+<section id="settings-panel" class="settings-panel" hidden>
+
+    <div class="settings-content">
+
+        <p class="settings-subtitle" data-i18n="config">
+            GAME CONFIGURATION
+        </p>
+
+        <h2 class="settings-title" data-i18n="settings">
+            SETTINGS
+        </h2>
+
+        <div class="setting-item">
+
+            <label for="language-select" data-i18n="language">
+                LANGUAGE
+            </label>
+
+            <select id="language-select" class="setting-select">
+                <option value="en">English</option>
+                <option value="id">Indonesia</option>
+            </select>
+
+        </div>
+
+        <div class="setting-item">
+
+            <label for="sound-toggle" data-i18n="sound">
+                SOUND EFFECTS
+            </label>
+
+            <input type="checkbox" id="sound-toggle" checked>
+
+        </div>
+
+        <div class="setting-item">
+
+            <label for="volume-control" data-i18n="volume">
+                VOLUME
+            </label>
+
+            <input
+                type="range"
+                id="volume-control"
+                min="0"
+                max="100"
+                value="50"
+            >
+
+            <span id="volume-value">50%</span>
+
+        </div>
+
+        <!-- SETTINGS STATUS -->
+        <div class="settings-status">
+
+            <p class="settings-status-title" data-i18n="currentConfiguration">
+                CURRENT CONFIGURATION
+            </p>
+
+            <div class="settings-status-item">
+                <span data-i18n="languageLabel">LANGUAGE</span>
+                <strong id="setting-language-status">ENGLISH</strong>
+            </div>
+
+            <div class="settings-status-item">
+                <span data-i18n="soundLabel">SOUND</span>
+                <strong id="setting-sound-status">ON</strong>
+            </div>
+
+            <div class="settings-status-item">
+                <span data-i18n="volumeLabel">VOLUME</span>
+                <strong id="setting-volume-status">50%</strong>
+            </div>
+
+        </div>
+
+        <button id="back-button" class="btn settings-btn" data-i18n="back">
+            BACK TO MENU
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- PORTFOLIO CONTENT -->
+<main id="portfolio-content" hidden>
+
+    <!-- PORTFOLIO NIGHT SKY -->
+    <div
+        class="portfolio-atmosphere"
+        id="portfolio-atmosphere"
+        aria-label="Interactive night sky"
+        data-i18n-aria-label="interactiveNightSky"
+    >
+
+        <!-- STAR LAYERS -->
+        <div class="portfolio-stars"></div>
+        <div class="portfolio-stars portfolio-stars-small"></div>
+
+        <!-- INTERACTIVE MOON -->
+        <div class="portfolio-moon" aria-hidden="true">
+            <span class="moon-disc phase-full"></span>
+        </div>
+
+        <!-- INTERACTIVE FIREFLIES -->
+        <button type="button" class="portfolio-firefly firefly-a" aria-label="Firefly" data-i18n-aria-label="firefly"></button>
+        <button type="button" class="portfolio-firefly firefly-b" aria-label="Firefly" data-i18n-aria-label="firefly"></button>
+        <button type="button" class="portfolio-firefly firefly-c" aria-label="Firefly" data-i18n-aria-label="firefly"></button>
+        <button type="button" class="portfolio-firefly firefly-d" aria-label="Firefly" data-i18n-aria-label="firefly"></button>
+        <button type="button" class="portfolio-firefly firefly-e" aria-label="Firefly" data-i18n-aria-label="firefly"></button>
+
+    </div>
+
+
+    <!-- PORTFOLIO NAVIGATION -->
+    <nav class="portfolio-nav navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+
+            <a class="navbar-brand portfolio-logo" href="#profile">
+                <img
+                    src="assets/images/main-logo.png"
+                    alt="The Life Journal Logo"
+                    class="portfolio-main-logo"
+                >
+
+                <span>THE LIFE JOURNAL</span>
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#portfolioNavbar"
+                aria-controls="portfolioNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                data-i18n-aria-label="toggleNavigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="portfolioNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#profile" data-i18n="navProfile">Profile</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-i18n="navStory">Story</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" data-i18n="navSkills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-i18n="navQuests">Quests</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements" data-i18n="navAchievements">Achievements</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#journey" data-i18n="navJourney">Journey</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-i18n="navContact">Contact</a>
+                    </li>
+
+                </ul>
+
+                <button
+                    type="button"
+                    class="player-status"
+                    id="nav-settings-button"
+                    data-i18n="navSettings"
+                >
+                    SETTINGS
+                </button>
+
+                <!-- EASTER EGG BUTTON -->
+                <button
+                    type="button"
+                    class="easter-egg-button"
+                    id="easter-egg-button"
+                    aria-label="Open Easter Egg"
+                    data-i18n-aria-label="openEasterEgg"
+                >
+                    <img
+                        src="assets/images/easter-egg-1.png"
+                        alt="Easter Egg"
+                        id="easter-egg-image"
+                    >
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- CHARACTER PROFILE -->
+    <section id="profile" class="profile-section reveal">
+
+        <div class="section-heading">
+
+            <p class="section-label" data-i18n="profileLabel">
+                01 — CHARACTER PROFILE
+            </p>
+
+            <h2 data-i18n="profileTitle">Who Am I?</h2>
+
+            <p class="section-description" data-i18n="profileDescription">
+                Every journey begins with knowing yourself.
+            </p>
+
+        </div>
+
+        <div class="profile-card">
+
+            <!-- PROFILE AVATAR -->
+            <div class="profile-avatar">
+
+                <img
+                    src="assets/images/my-picture.png"
+                    alt="Character Profile"
+                    data-i18n-alt="characterProfileAlt"
+                >
+
+                <div class="avatar-frame"></div>
+
+                <span class="avatar-level">AIDIL</span>
+
+            </div>
+
+            <!-- PROFILE INFORMATION -->
+            <div class="profile-information">
+
+                <div class="profile-rank">
+                    <span class="rank-icon">✦</span>
+                    <span data-i18n="profileRankTag">ADVENTURER PROFILE</span>
+                    <span class="rank-icon">✦</span>
+                </div>
+
+                <p class="profile-tag" data-i18n="profileTag">
+                    PLAYER INFORMATION
+                </p>
+
+                <h3>Aidil Rezqy Hadiansyah</h3>
+
+                <p class="profile-role" data-i18n="profileRole">
+                    Student | Technology Enthusiast
+                </p>
+
+                <div class="profile-divider"></div>
+
+                <!-- CHARACTER DETAILS -->
+                <div class="profile-details">
+
+                    <div class="detail-item">
+
+                        <span class="detail-label">
+                            <span class="detail-icon">▣</span>
+                            <span data-i18n="profileClass">CLASS</span>
+                        </span>
+
+                        <p>XI TKJ 1</p>
+
+                    </div>
+
+                    <div class="detail-item">
+
+                        <span class="detail-label">
+                            <span class="detail-icon">⚙</span>
+                            <span data-i18n="profileMajor">MAJOR</span>
+                        </span>
+
+                        <p data-i18n="profileMajorValue">
+                            Computer and Network Engineering
+                        </p>
+
+                    </div>
+
+                    <div class="detail-item">
+
+                        <span class="detail-label">
+                            <span class="detail-icon">⌖</span>
+                            <span data-i18n="profileLocation">LOCATION</span>
+                        </span>
+
+                        <p data-i18n="profileLocationValue">
+                            Blitar, East Java, Indonesia
+                        </p>
+
+                    </div>
+
+                    <div class="detail-item">
+
+                        <span class="detail-label">
+                            <span class="detail-icon">✦</span>
+                            <span data-i18n="profileStatus">STATUS</span>
+                        </span>
+
+                        <p data-i18n="profileStatusValue">
+                            Learning & Exploring
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CHARACTER EXPERIENCE -->
+                <div class="character-exp">
+
+                    <div class="exp-heading">
+                        <span data-i18n="profileLevel">CHARACTER LEVEL</span>
+                        <span class="exp-level" data-i18n="profileLevelValue">LV. 01</span>
+                    </div>
+
+                    <div class="exp-bar">
+                        <div class="exp-progress"></div>
+                    </div>
+
+                    <div class="exp-footer">
+                        <span data-i18n="profileRank">BEGINNER ADVENTURER</span>
+                        <span data-i18n="profileExp">250 / 1000 EXP</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- PROFILE QUOTE -->
+        <div class="profile-quote" data-i18n="profileQuote">
+            "Every skill begins with curiosity, and every achievement begins with a journey."
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT ME / CHARACTER STORY -->
+    <section id="about" class="about-section reveal">
+
+        <div class="section-heading">
+            <p class="section-label" data-i18n="storyLabel">
+                02 — CHARACTER STORY
+            </p>
+
+            <h2 data-i18n="storyTitle">
+                My Journey Begins
+            </h2>
+
+            <p class="section-description" data-i18n="storyDescription">
+                A little story about the person behind this journey.
+            </p>
+        </div>
+
+        <div class="story-card">
+
+            <div class="story-icon">
+                ✦
+            </div>
+
+            <div class="story-content">
+
+                <p class="story-tag" data-i18n="storyTag">
+                    THE STORY SO FAR
+                </p>
+
+                <h3 data-i18n="storyGreeting">
+                    Hello, I'm Aidil!
+                </h3>
+
+                <p data-i18n="storyParagraph1">
+                    I am a student at SMKN 1 Blitar, majoring in Computer and Network Engineering. My interest in the digital world began in junior high school, when I became curious about how technology worked. This curiosity grew when I joined the Robotics extracurricular program and achieved several competition awards.
+                </p>
+
+                <p data-i18n="storyParagraph2">
+                    That experience encouraged me to continue learning and choose the TJKT program at SMKN 1 Blitar. Beyond technology, I also enjoy creative work, especially graphic design and video editing. I often create posters and edit videos for school assignments, social media content, and competitions.
+                </p>
+
+                <p data-i18n="storyParagraph3">
+                    My learning journey started with simple Scratch projects in junior high school and has continued into web development. Each step reminds me that progress takes curiosity, determination, and a willingness to keep practicing. This website is a place to document that journey, one experience at a time.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="story-quote" data-i18n="storyQuote">
+            "The journey of a thousand lines of code begins with a single idea."
+        </div>
+
+    </section>
+
+
+    <!-- SKILL TREE -->
+    <section id="skills" class="skills-section reveal">
+
+        <div class="section-heading">
+            <p class="section-label" data-i18n="skillsLabel">
+                03 — SKILL TREE
+            </p>
+
+            <h2 data-i18n="skillsTitle">
+                My Abilities
+            </h2>
+
+            <p class="section-description" data-i18n="skillsDescription">
+                Skills I've learned and continue to develop.
+            </p>
+        </div>
+
+        <div class="skills-grid">
+
+            <!-- 01. FRONT-END WEB DEVELOPMENT -->
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <span class="skill-number">01</span>
+                    <span class="skill-symbol">⌨</span>
+                </div>
+
+                <div class="skill-info">
+                    <h3 data-i18n="skillFrontEndTitle">Front-End Web</h3>
+                    <span data-i18n="skillLevelBeginner">Beginner</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="25"></div>
+                </div>
+
+                <div class="skill-progress-label">
+                    <span data-i18n="skillProgressLabel">EXP Progress</span>
+                    <span>25%</span>
+                </div>
+
+                <p>HTML · CSS · JavaScript</p>
+
+                <p class="skill-description" data-i18n="skillFrontEndDescription">
+                    Learning to build website structures, design interfaces, and create interactive web experiences.
+                </p>
+            </div>
+
+
+            <!-- 02. INTERNET OF THINGS -->
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <span class="skill-number">02</span>
+                    <span class="skill-symbol">⌁</span>
+                </div>
+
+                <div class="skill-info">
+                    <h3 data-i18n="skillIotTitle">Internet of Things</h3>
+                    <span data-i18n="skillLevelAdvanced">Advanced</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="100"></div>
+                </div>
+
+                <div class="skill-progress-label">
+                    <span data-i18n="skillProgressLabel">EXP Progress</span>
+                    <span>100%</span>
+                </div>
+
+                <p>ESP32 · Arduino · Arduino IDE · Python</p>
+
+                <p class="skill-description" data-i18n="skillIotDescription">
+                    Understanding electronic circuits, microcontrollers, programming, and basic IoT system development.
+                </p>
+            </div>
+
+
+            <!-- 03. NETWORKING -->
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <span class="skill-number">03</span>
+                    <span class="skill-symbol">⌘</span>
+                </div>
+
+                <div class="skill-info">
+                    <h3 data-i18n="skillNetworkingTitle">Networking</h3>
+                    <span data-i18n="skillLevelDeveloping">Developing</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="75"></div>
+                </div>
+
+                <div class="skill-progress-label">
+                    <span data-i18n="skillProgressLabel">EXP Progress</span>
+                    <span>75%</span>
+                </div>
+
+                <p>Cisco Packet Tracer · MikroTik · RouterOS · SwitchOS</p>
+
+                <p class="skill-description" data-i18n="skillNetworkingDescription">
+                    Exploring network topologies, device configuration, IP addressing, and network connectivity.
+                </p>
+            </div>
+
+
+            <!-- 04. DATABASE MANAGEMENT -->
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <span class="skill-number">04</span>
+                    <span class="skill-symbol">▤</span>
+                </div>
+
+                <div class="skill-info">
+                    <h3 data-i18n="skillDatabaseTitle">Database Management</h3>
+                    <span data-i18n="skillLevelIntermediate">Intermediate</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="50"></div>
+                </div>
+
+                <div class="skill-progress-label">
+                    <span data-i18n="skillProgressLabel">EXP Progress</span>
+                    <span>50%</span>
+                </div>
+
+                <p>MySQL · MariaDB · SQL</p>
+
+                <p class="skill-description" data-i18n="skillDatabaseDescription">
+                    Learning to organize data, create tables, manage records, and work with SQL queries.
+                </p>
+            </div>
+
+
+            <!-- 05. CREATIVE EDITING -->
+            <div class="skill-card">
+                <div class="skill-card-top">
+                    <span class="skill-number">05</span>
+                    <span class="skill-symbol">✧</span>
+                </div>
+
+                <div class="skill-info">
+                    <h3 data-i18n="skillCreativeTitle">Creative Editing</h3>
+                    <span data-i18n="skillLevelAdvanced">Advanced</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="100"></div>
+                </div>
+
+                <div class="skill-progress-label">
+                    <span data-i18n="skillProgressLabel">EXP Progress</span>
+                    <span>100%</span>
+                </div>
+
+                <p>Canva · PixelLab · CapCut · Alight Motion</p>
+
+                <p class="skill-description" data-i18n="skillCreativeDescription">
+                    Creating graphic designs, visual content, and basic video editing projects.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO 4 — QUEST LOG -->
+    <section id="projects" class="projects-section reveal">
+
+        <div class="section-heading">
+            <p class="section-label" data-i18n="projectsLabel">
+                04 — QUEST LOG
+            </p>
+
+            <h2 data-i18n="projectsTitle">
+                My Completed Quests
+            </h2>
+
+            <p class="section-description" data-i18n="projectsDescription">
+                A collection of projects and challenges from my learning journey.
+            </p>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- QUEST 001 : SMART HOME -->
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/projects/smart-home.jpg"
+                        alt="Smart Home System Project"
+                        data-i18n-alt="projectSmartHomeAlt"
+                        loading="lazy">
+                </div>
+
+                <div class="project-number">QUEST 001</div>
+                <div class="project-icon">🏠</div>
+
+                <h3 data-i18n="projectSmartHomeTitle">Smart Home System</h3>
+
+                <p class="project-category" data-i18n="projectSmartHomeCategory">INTERNET OF THINGS</p>
+
+                <p class="project-description" data-i18n="projectSmartHomeDescription">
+                    A smart home automation project featuring RFID security, automatic lighting using LDR, and temperature-based room cooling. The system is powered by solar energy.
+                </p>
+
+                <div class="project-tech">
+                    <span>Arduino</span>
+                    <span>RFID</span>
+                    <span>LDR</span>
+                    <span data-i18n="techTemperatureSensor">Temperature Sensor</span>
+                    <span data-i18n="techSolarPanel">Solar Panel</span>
+                </div>
+
+                <div class="project-status">
+                    <span data-i18n="questStatus">QUEST STATUS</span>
+                    <strong data-i18n="questCompleted">COMPLETED</strong>
+                </div>
+
+            </div>
+
+
+            <!-- QUEST 002 : SMART GARDEN -->
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/projects/smart-garden.jpg"
+                        alt="Smart Garden Project"
+                        data-i18n-alt="projectSmartGardenAlt"
+                        loading="lazy">
+                </div>
+
+                <div class="project-number">QUEST 002</div>
+                <div class="project-icon">🌱</div>
+
+                <h3 data-i18n="projectSmartGardenTitle">Smart Garden</h3>
+
+                <p class="project-category" data-i18n="projectSmartGardenCategory">INTERNET OF THINGS</p>
+
+                <p class="project-description" data-i18n="projectSmartGardenDescription">
+                    An automatic plant watering system using ESP32 and soil moisture sensors, with a website-based monitoring system.
+                </p>
+
+                <div class="project-tech">
+                    <span>ESP32</span>
+                    <span data-i18n="techSoilSensor">Soil Sensor</span>
+                    <span>Relay</span>
+                    <span data-i18n="techWebMonitoring">Web Monitoring</span>
+                </div>
+
+                <div class="project-status">
+                    <span data-i18n="questStatus">QUEST STATUS</span>
+                    <strong data-i18n="questCompleted">COMPLETED</strong>
+                </div>
+
+            </div>
+
+
+            <!-- QUEST 003 : WEATHER STATION -->
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/projects/weather-station.png"
+                        alt="Weather Station Project"
+                        data-i18n-alt="projectWeatherAlt"
+                        loading="lazy">
+                </div>
+
+                <div class="project-number">QUEST 003</div>
+                <div class="project-icon">🌤</div>
+
+                <h3 data-i18n="projectWeatherTitle">Weather Station</h3>
+
+                <p class="project-category" data-i18n="projectWeatherCategory">INTERNET OF THINGS</p>
+
+                <p class="project-description" data-i18n="projectWeatherDescription">
+                    A weather monitoring device that measures temperature, humidity, and atmospheric pressure using AHT20 and BMP280 sensors. Its data can be monitored through a website.
+                </p>
+
+                <div class="project-tech">
+                    <span>ESP32</span>
+                    <span>AHT20</span>
+                    <span>BMP280</span>
+                    <span data-i18n="techWebMonitoring">Web Monitoring</span>
+                </div>
+
+                <div class="project-status">
+                    <span data-i18n="questStatus">QUEST STATUS</span>
+                    <strong data-i18n="questCompleted">COMPLETED</strong>
+                </div>
+
+            </div>
+
+
+            <!-- QUEST 004 : YUYU'S BAKERY -->
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/projects/yuyus-bakery.png"
+                        alt="Yuyu's Bakery Website"
+                        data-i18n-alt="projectBakeryAlt"
+                        loading="lazy">
+                </div>
+
+                <div class="project-number">QUEST 004</div>
+                <div class="project-icon">⌨</div>
+
+                <h3>Yuyu's Bakery</h3>
+
+                <p class="project-category" data-i18n="projectBakeryCategory">WEB DEVELOPMENT</p>
+
+                <p class="project-description" data-i18n="projectBakeryDescription">
+                    A simple bakery cashier website built to calculate product prices, quantities, discounts, and final transactions.
+                </p>
+
+                <div class="project-tech">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="project-status">
+                    <span data-i18n="questStatus">QUEST STATUS</span>
+                    <strong data-i18n="questCompleted">COMPLETED</strong>
+                </div>
+
+            </div>
+
+
+            <!-- QUEST 005 : LIBRARY DATABASE -->
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/projects/library-database.png"
+                        alt="Library Database Project"
+                        data-i18n-alt="projectDatabaseAlt"
+                        loading="lazy">
+                </div>
+
+                <div class="project-number">QUEST 005</div>
+                <div class="project-icon">🗄</div>
+
+                <h3 data-i18n="projectDatabaseTitle">Library Database</h3>
+
+                <p class="project-category" data-i18n="projectDatabaseCategory">DATABASE MANAGEMENT</p>
+
+                <p class="project-description" data-i18n="projectDatabaseDescription">
+                    A library database designed to organize member information, book collections, and borrowing records.
+                </p>
+
+                <div class="project-tech">
+                    <span>MariaDB</span>
+                    <span>SQL</span>
+                    <span data-i18n="techDatabase">Database</span>
+                </div>
+
+                <div class="project-status">
+                    <span data-i18n="questStatus">QUEST STATUS</span>
+                    <strong data-i18n="questCompleted">COMPLETED</strong>
+                </div>
+
+            </div>
+
+
+            <!-- QUEST 006 : CREATIVE STUDIO -->
+            <div class="project-card">
+
+                <div class="project-image">
+                    <img
+                        src="assets/images/projects/creative-studio.png"
+                        alt="Graphic Design and Video Editing Portfolio"
+                        data-i18n-alt="projectCreativeAlt"
+                        loading="lazy">
+                </div>
+
+                <div class="project-number">QUEST 006</div>
+                <div class="project-icon">🎨</div>
+
+                <h3 data-i18n="projectCreativeTitle">Creative Studio</h3>
+
+                <p class="project-category" data-i18n="projectCreativeCategory">CREATIVE MEDIA</p>
+
+                <p class="project-description" data-i18n="projectCreativeDescription">
+                    A collection of graphic design and video editing projects, showcasing creativity through digital visual content.
+                </p>
+
+                <div class="project-tech">
+                    <span>Canva</span>
+                    <span>PixelLab</span>
+                    <span>CapCut</span>
+                    <span>Alight Motion</span>
+                </div>
+
+                <div class="project-status">
+                    <span data-i18n="questStatus">QUEST STATUS</span>
+                    <strong data-i18n="questCompleted">COMPLETED</strong>
+                </div>
+
+                <a
+                    href="gallery.html"
+                    class="project-view-btn"
+                    target="_blank"
+                    rel="noopener"
+                    data-i18n="questViewGallery"
+                >
+                    OPEN CREATIVE GALLERY ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACHIEVEMENT BADGES -->
+    <section id="achievements" class="achievements-section reveal">
+
+        <div class="section-heading">
+            <p class="section-label" data-i18n="achievementLabel">
+                05 — ACHIEVEMENT BADGES
+            </p>
+
+            <h2 data-i18n="achievementTitle">
+                My Achievement
+            </h2>
+
+            <p class="section-description" data-i18n="achievementDescription">
+                A meaningful milestone that represents effort, creativity, and the courage to take part in a competition.
+            </p>
+        </div>
+
+        <div class="badges-grid">
+
+            <article class="certificate-card">
+
+                <!-- Achievement Emblem -->
+                <div class="achievement-emblem">
+                    <span>🏆</span>
+                </div>
+
+                <!-- Certificate Image -->
+                <div class="certificate-image badge-essay">
+
+                    <button
+                        type="button"
+                        class="certificate-open"
+                        aria-label="View certificate in full size"
+                        data-i18n-aria-label="viewCertificateFull"
+                    >
+                        <img
+                            src="assets/badges/badge1.jpg"
+                            alt="Third Place National Essay and Quiz Competition Certificate"
+                            data-i18n-alt="certificateImageAlt"
+                            loading="lazy"
+                        >
+
+                        <span class="certificate-zoom-hint" data-i18n="achievementView">
+                            VIEW CERTIFICATE
+                        </span>
+                    </button>
+
+                </div>
+
+                <!-- Certificate Information -->
+                <div class="certificate-info">
+
+                    <span class="achievement-rank" data-i18n="achievementRank">
+                        3RD PLACE
+                    </span>
+
+                    <h3 data-i18n="achievementName">
+                        National Essay & Quiz Competition
+                    </h3>
+
+                    <p data-i18n="achievementDetails">
+                        Third Place in the National High School Essay and Quiz Competition with the theme "Shaping Youth Potential for the Future of Logistics".
+                    </p>
+
+                    <span class="certificate-type" data-i18n="achievementType">
+                        Competition Award
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ADVENTURE HISTORY -->
+    <section id="journey" class="journey-section reveal">
+
+        <div class="section-heading">
+            <p class="section-label" data-i18n="journeyLabel">
+                06 — ADVENTURE HISTORY
+            </p>
+
+            <h2 data-i18n="journeyTitle">
+                My Learning Journey
+            </h2>
+
+            <p class="section-description" data-i18n="journeyDescription">
+                Every chapter is a part of my story.
+            </p>
+        </div>
+
+        <div class="journey-timeline">
+
+            <!-- KINDERGARTEN -->
+            <div class="journey-item completed">
+
+                <div class="journey-marker">01</div>
+
+                <div class="journey-card">
+
+                    <div class="journey-school-logo">
+                        <img
+                            src="assets/images/schools/tk-melati-indah.png"
+                            alt="Logo TK Melati Indah"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <span class="journey-status" data-i18n="journeyStatusCompleted">
+                        CHAPTER COMPLETED
+                    </span>
+
+                    <h3 data-i18n="journeyKindergarten">Kindergarten</h3>
+
+                    <p class="journey-period">TK Melati Indah</p>
+
+                    <p data-i18n="journeyDescriptionKindergarten">
+                        The beginning of my educational journey, where I started discovering the world around me.
+                    </p>
+
+                    <a
+                        href="https://maps.app.goo.gl/LLgGceqkZPAcWcxg8?g_st=a"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="journey-location"
+                    >
+                        <span>⌖</span>
+                        <span data-i18n="journeyViewLocation">VIEW SCHOOL LOCATION</span>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- ELEMENTARY SCHOOL -->
+            <div class="journey-item completed">
+
+                <div class="journey-marker">02</div>
+
+                <div class="journey-card">
+
+                    <div class="journey-school-logo">
+                        <img
+                            src="assets/images/schools/mi-maarif-talok.png"
+                            alt="Logo MI Ma'arif Talok"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <span class="journey-status" data-i18n="journeyStatusCompleted">
+                        CHAPTER COMPLETED
+                    </span>
+
+                    <h3 data-i18n="journeyElementary">Elementary School</h3>
+
+                    <p class="journey-period">MI Ma'arif Talok</p>
+
+                    <p data-i18n="journeyDescriptionElementary">
+                        A chapter filled with basic knowledge, new friendships, and valuable experiences.
+                    </p>
+
+                    <a
+                        href="https://maps.app.goo.gl/76jY4sdbF8Xii5Ct7?g_st=ac"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="journey-location"
+                    >
+                        <span>⌖</span>
+                        <span data-i18n="journeyViewLocation">VIEW SCHOOL LOCATION</span>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- JUNIOR HIGH SCHOOL -->
+            <div class="journey-item completed">
+
+                <div class="journey-marker">03</div>
+
+                <div class="journey-card">
+
+                    <div class="journey-school-logo">
+                        <img
+                            src="assets/images/schools/mtsn-1-blitar.png"
+                            alt="Logo MTsN 1 Kota Blitar"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <span class="journey-status" data-i18n="journeyStatusCompleted">
+                        CHAPTER COMPLETED
+                    </span>
+
+                    <h3 data-i18n="journeyJuniorHigh">Junior High School</h3>
+
+                    <p class="journey-period">MTsN 1 Kota Blitar</p>
+
+                    <p data-i18n="journeyDescriptionJuniorHigh">
+                        A period of growth, exploration, and discovering new interests.
+                    </p>
+
+                    <a
+                        href="https://maps.app.goo.gl/95Zye2kz4iGtGy889"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="journey-location"
+                    >
+                        <span>⌖</span>
+                        <span data-i18n="journeyViewLocation">VIEW SCHOOL LOCATION</span>
+                    </a>
+
+                </div>
+            </div>
+
+
+            <!-- VOCATIONAL HIGH SCHOOL -->
+            <div class="journey-item ongoing">
+
+                <div class="journey-marker">04</div>
+
+                <div class="journey-card">
+
+                    <div class="study-character">
+                        <video
+                            src="assets/videos/study.mp4"
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                            preload="metadata"
+                            aria-label="Pixel character studying"
+                            data-i18n-aria-label="studyingCharacter"
+                        ></video>
+                    </div>
+
+                    <span class="journey-status" data-i18n="journeyStatusOngoing">
+                        CURRENT CHAPTER — ONGOING
+                    </span>
+
+                    <h3 data-i18n="journeyVocational">Vocational High School</h3>
+
+                    <p class="journey-period">SMKN 1 Blitar</p>
+
+                    <p data-i18n="journeyDescriptionVocational">
+                        My current adventure in learning technology, programming, networking, and developing new skills.
+                    </p>
+
+                    <a
+                        href="https://maps.app.goo.gl/J1dkFFxtEEamHnBUA"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="journey-location"
+                    >
+                        <span>⌖</span>
+                        <span data-i18n="journeyViewLocation">VIEW SCHOOL LOCATION</span>
+                    </a>
+
+                    <div class="ongoing-progress">
+
+                        <div class="ongoing-progress-info">
+                            <span data-i18n="journeyProgress">
+                                JOURNEY IN PROGRESS
+                            </span>
+
+                            <span class="loading-text" data-i18n="journeyLoading">
+                                LOADING...
+                            </span>
+                        </div>
+
+                        <div class="ongoing-progress-bar">
+                            <div class="ongoing-progress-fill"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- NEXT CHAPTER -->
+            <div class="journey-item next-chapter">
+
+                <div class="journey-marker">?</div>
+
+                <div class="next-chapter-label">
+                    <span data-i18n="journeyNextChapter">THE NEXT CHAPTER</span>
+                    <p data-i18n="journeyNextDescription">To be discovered...</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COMMUNICATION PORTAL -->
+    <section id="contact" class="contact-section reveal">
+
+        <div class="section-heading">
+            <p class="section-label" data-i18n="contactLabel">
+                07 — COMMUNICATION PORTAL
+            </p>
+
+            <h2 data-i18n="contactTitle">
+                Let's Connect!
+            </h2>
+
+            <p class="section-description" data-i18n="contactDescription">
+                Have a question or want to discuss a project? Feel free to send me a message.
+            </p>
+        </div>
+
+        <div class="contact-container">
+
+            <!-- CONTACT INFORMATION -->
+            <div class="contact-info">
+
+                <p class="contact-tag" data-i18n="contactTag">
+                    PLAYER CONNECTION
+                </p>
+
+                <h3 data-i18n="contactHeading">
+                    Open a New Connection
+                </h3>
+
+                <p data-i18n="contactIntroduction">
+                    Every great journey becomes better when we share experiences and ideas.
+                </p>
+
+                <!-- EMAIL -->
+                <div class="contact-detail">
+                    <img
+                        src="assets/images/social/email.png"
+                        alt="Email"
+                        class="contact-icon"
+                    >
+
+                    <div>
+                        <small data-i18n="contactEmail">EMAIL</small>
+                        <p>
+                            <a href="mailto:aidilrezqy91@gmail.com">
+                                aidilrezqy91@gmail.com
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- GITHUB -->
+                <div class="contact-detail">
+                    <img
+                        src="assets/images/social/github.png"
+                        alt="GitHub"
+                        class="contact-icon"
+                    >
+
+                    <div>
+                        <small data-i18n="contactGithub">GITHUB</small>
+                        <p>
+                            <a href="https://github.com/AidilRezqyh-deathbody"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                github.com/AidilRezqyh-deathbody
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- INSTAGRAM -->
+                <div class="contact-detail">
+                    <img
+                        src="assets/images/social/instagram.png"
+                        alt="Instagram"
+                        class="contact-icon"
+                    >
+
+                    <div>
+                        <small data-i18n="contactInstagram">INSTAGRAM</small>
+                        <p>
+                            <a href="https://www.instagram.com/aidilcrafterror999/"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                @aidilcrafterror999
+                            </a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <div class="contact-form-card">
+
+                <p class="contact-tag" data-i18n="contactFormTag">
+                    SEND A MESSAGE
+                </p>
+
+                <h3 data-i18n="contactFormTitle">
+                    Message Portal
+                </h3>
+
+                <form
+                    id="contact-form"
+                    action="https://formsubmit.co/aidilrezqy91@gmail.com"
+                    method="POST"
+                >
+
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://aidilrezqyh-deathbody.github.io/the-life-journal/#contact"
+                    >
+
+                    <!-- FormSubmit Configuration -->
+                    <input
+                        type="hidden"
+                        name="_subject"
+                        value="New Message — The Life Journal"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="_template"
+                        value="table"
+                    >
+
+                    <input
+                        type="hidden"
+                        name="_captcha"
+                        value="true"
+                    >
+
+                    <!-- NAME -->
+                    <div class="form-group">
+
+                        <label for="contact-name" data-i18n="contactName">
+                            Your Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contact-name"
+                            name="name"
+                            maxlength="60"
+                            autocomplete="name"
+                            data-i18n-placeholder="contactNamePlaceholder"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="form-group">
+
+                        <label for="contact-email" data-i18n="contactEmailLabel">
+                            Your Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="contact-email"
+                            name="email"
+                            autocomplete="email"
+                            data-i18n-placeholder="contactEmailPlaceholder"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+                    <!-- MESSAGE -->
+                    <div class="form-group">
+
+                        <label for="contact-message" data-i18n="contactMessage">
+                            Your Message
+                        </label>
+
+                        <textarea
+                            id="contact-message"
+                            name="message"
+                            rows="5"
+                            maxlength="1000"
+                            data-i18n-placeholder="contactMessagePlaceholder"
+                            placeholder="Write your message..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                    <!-- SUBMIT -->
+                    <button
+                        type="submit"
+                        class="contact-submit"
+                        data-i18n="contactSubmit"
+                    >
+                        SEND MESSAGE →
+                    </button>
+
+                    <p
+                        id="form-feedback"
+                        class="form-feedback"
+                        aria-live="polite"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="portfolio-footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h3>THE LIFE JOURNAL</h3>
+
+                <p data-i18n="footerDescription">
+                    Every journey has a story. This is mine, still being written.
+                </p>
+            </div>
+
+            <div class="footer-navigation">
+                <h4 data-i18n="footerNavigation">
+                    QUICK NAVIGATION
+                </h4>
+
+                <div class="footer-links">
+                    <a href="#profile" data-i18n="navProfile">Profile</a>
+                    <a href="#about" data-i18n="navStory">Story</a>
+                    <a href="#skills" data-i18n="navSkills">Skills</a>
+                    <a href="#projects" data-i18n="navQuests">Quests</a>
+                    <a href="#achievements" data-i18n="navAchievements">Achievements</a>
+                    <a href="#journey" data-i18n="navJourney">Journey</a>
+                    <a href="#contact" data-i18n="navContact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-back">
+
+                <a href="index.html" class="footer-menu-link" data-i18n="footerReturnMenu">
+                    ↶ RETURN TO MAIN MENU
+                </a>
+
+                <a href="#profile" class="back-to-top" data-i18n="footerBackToTop">
+                    ↑ BACK TO TOP
+                </a>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span id="current-year"></span>
+                    <span data-i18n="footerCopyright">
+                        The Life Journal. All rights reserved.
+                    </span>
+                </p>
+
+                <p data-i18n="footerMadeWith">
+                    Made with curiosity & passion.
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+</main>
+
+
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<audio id="menu-music" src="assets/audio/music-menu.mp3" loop preload="auto"></audio>
+<audio id="portfolio-music" src="assets/audio/main-music.mp3" loop preload="auto"></audio>
+
+<!-- Custom JavaScript -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
