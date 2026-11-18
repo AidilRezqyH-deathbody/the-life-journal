@@ -336,8 +336,11 @@ const translations = {
         studyingCharacter: "Character studying",
 
         // EASTER EGG
-        easterEggPrompt: "You discovered a hidden secret!\n\nEnter the secret code:",
-        easterEggWrong: "Secret code not found."
+easterEggPrompt: "You discovered a hidden secret!\n\nEnter the secret code:",
+easterEggWrong: "Secret code not found.",
+easterEggChecking: "Verifying secret code...",
+easterEggRateLimited: "Too many attempts. Please try again later.",
+easterEggServiceError: "Unable to verify the secret code. Please try again."
 
     },
 
@@ -611,8 +614,12 @@ const translations = {
         studyingCharacter: "Karakter sedang belajar",
 
         // EASTER EGG
-        easterEggPrompt: "Kamu menemukan sebuah rahasia tersembunyi!\n\nMasukkan kode rahasia:",
-        easterEggWrong: "Kode rahasia tidak ditemukan."
+       // EASTER EGG
+easterEggPrompt: "Kamu menemukan sebuah rahasia tersembunyi!\n\nMasukkan kode rahasia:",
+easterEggWrong: "Kode rahasia tidak ditemukan.",
+easterEggChecking: "Memverifikasi kode rahasia...",
+easterEggRateLimited: "Terlalu banyak percobaan. Silakan coba lagi nanti.",
+easterEggServiceError: "Kode rahasia tidak dapat diverifikasi. Silakan coba lagi."
 
     }
 
@@ -1316,15 +1323,32 @@ else if (loadingScreen && loadingProgress && loadingText) {
 }
 
 
+
 /* =========================================
    21. EASTER EGG SYSTEM
+   SUPABASE CODE VERIFICATION
 ========================================= */
 
+// HTML ELEMENTS
 const easterEggButton = document.getElementById("easter-egg-button");
 const easterEggImage = document.getElementById("easter-egg-image");
 
+
+// SUPABASE CONFIGURATION
+const EASTER_EGG_SUPABASE_URL =
+    "https://ztfgnjakasohhtkohjln.supabase.co";
+
+const EASTER_EGG_SUPABASE_KEY =
+    "sb_publishable_93rjkEGPxv8ec9ldggW6VQ_0BVeQe2g";
+
+const EASTER_EGG_VERIFY_URL =
+    `${EASTER_EGG_SUPABASE_URL}/functions/v1/verify-code`;
+
+
+// EASTER EGG STATE
 let easterEggClickCount = 0;
 let easterEggTimer = null;
+let easterEggVerifying = false;
 
 const easterEggImages = [
     "assets/images/easter-egg-1.png",
@@ -1334,15 +1358,140 @@ const easterEggImages = [
 let currentEasterEggImage = 0;
 
 
+// RESET EASTER EGG
+function resetEasterEgg() {
+
+    easterEggClickCount = 0;
+
+    currentEasterEggImage = 0;
+
+    clearTimeout(easterEggTimer);
+
+    easterEggImage.src = easterEggImages[0];
+
+    easterEggImage.classList.remove("easter-changing");
+
+}
+
+
+// VERIFY SECRET CODE
+async function verifyEasterEggCode(code) {
+
+    const currentLanguage = languageSelect?.value || "en";
+
+    const selectedTranslations =
+        translations[currentLanguage] || translations.en;
+
+    try {
+
+        const response = await fetch(EASTER_EGG_VERIFY_URL, {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json",
+                "apikey": EASTER_EGG_SUPABASE_KEY
+            },
+
+            body: JSON.stringify({
+                code: code
+            })
+
+        });
+
+
+        const result = await response.json();
+
+
+        // INVALID CODE
+        if (response.status === 401) {
+
+            alert(selectedTranslations.easterEggWrong);
+
+            return;
+
+        }
+
+
+        // RATE LIMIT
+        if (response.status === 429) {
+
+            alert(selectedTranslations.easterEggRateLimited);
+
+            return;
+
+        }
+
+
+        // OTHER SERVER ERRORS
+        if (!response.ok) {
+
+            console.error(
+                "Easter Egg Verification Error:",
+                result.error || response.status
+            );
+
+            alert(selectedTranslations.easterEggServiceError);
+
+            return;
+
+        }
+
+
+        // SUCCESSFUL VERIFICATION
+        if (result.success && result.token) {
+
+            // SAVE TEMPORARY SESSION TOKEN
+            sessionStorage.setItem(
+                "garden_session_token",
+                result.token
+            );
+
+            // REDIRECT TO A GARDEN OF MEMORIES
+            window.location.href = "garden.html";
+
+            return;
+
+        }
+
+
+        // UNEXPECTED RESPONSE
+        alert(selectedTranslations.easterEggServiceError);
+
+    } catch (error) {
+
+        console.error(
+            "Easter Egg Connection Error:",
+            error
+        );
+
+        alert(selectedTranslations.easterEggServiceError);
+
+    }
+
+}
+
+
+// EASTER EGG CLICK EVENT
 if (easterEggButton && easterEggImage) {
 
-    easterEggButton.addEventListener("click", function() {
+    easterEggButton.addEventListener("click", async function() {
+
+        // PREVENT MULTIPLE VERIFICATION REQUESTS
+        if (easterEggVerifying) {
+            return;
+        }
+
+        playClickSound();
 
         easterEggClickCount++;
 
         clearTimeout(easterEggTimer);
 
-        const nextImage = currentEasterEggImage === 0 ? 1 : 0;
+
+        // CHANGE EASTER EGG IMAGE
+        const nextImage =
+            currentEasterEggImage === 0 ? 1 : 0;
 
         easterEggImage.classList.add("easter-changing");
 
@@ -1358,6 +1507,7 @@ if (easterEggButton && easterEggImage) {
         }, 250);
 
 
+        // RESET IMAGE AFTER INACTIVITY
         easterEggTimer = setTimeout(function() {
 
             easterEggImage.classList.add("easter-changing");
@@ -1380,29 +1530,65 @@ if (easterEggButton && easterEggImage) {
 
             clearTimeout(easterEggTimer);
 
-            setTimeout(function() {
+            easterEggVerifying = true;
 
-                const currentLanguage = languageSelect.value;
+            easterEggButton.disabled = true;
 
+            setTimeout(async function() {
+
+                const currentLanguage =
+                    languageSelect?.value || "en";
+
+                const selectedTranslations =
+                    translations[currentLanguage] || translations.en;
+
+
+                // ASK FOR SECRET CODE
                 const secretCode = prompt(
-                    translations[currentLanguage].easterEggPrompt
+                    selectedTranslations.easterEggPrompt
                 );
 
-                if (secretCode !== null) {
 
-                    alert(
-                        translations[currentLanguage].easterEggWrong
-                    );
+                // CANCEL INPUT
+                if (secretCode === null) {
+
+                    resetEasterEgg();
+
+                    easterEggVerifying = false;
+
+                    easterEggButton.disabled = false;
+
+                    return;
 
                 }
 
-                easterEggClickCount = 0;
 
-                currentEasterEggImage = 0;
+                // EMPTY INPUT
+                if (!secretCode.trim()) {
 
-                easterEggImage.src = easterEggImages[0];
+                    alert(selectedTranslations.easterEggWrong);
 
-                easterEggImage.classList.remove("easter-changing");
+                    resetEasterEgg();
+
+                    easterEggVerifying = false;
+
+                    easterEggButton.disabled = false;
+
+                    return;
+
+                }
+
+
+                // VERIFY WITH SUPABASE
+                await verifyEasterEggCode(secretCode.trim());
+
+
+                // RESET AFTER VERIFICATION
+                resetEasterEgg();
+
+                easterEggVerifying = false;
+
+                easterEggButton.disabled = false;
 
             }, 550);
 
@@ -1632,7 +1818,6 @@ if (
 
 }
 
-
 /* =========================================
    26. CONTACT FORM — RESET AFTER REDIRECT
 ========================================= */
@@ -1641,20 +1826,20 @@ const urlParams = new URLSearchParams(window.location.search);
 
 if (urlParams.get("submitted") === "true") {
 
-    const contactForm = document.getElementById("contact-form");
-
-    const formFeedback = document.getElementById("form-feedback");
-
     if (contactForm) {
         contactForm.reset();
     }
 
     if (formFeedback) {
 
-        const currentLanguage = languageSelect.value;
+        const currentLanguage =
+            languageSelect?.value || "en";
+
+        const selectedTranslations =
+            translations[currentLanguage] || translations.en;
 
         formFeedback.textContent =
-            translations[currentLanguage].contactSuccess;
+            selectedTranslations.contactSuccess;
 
         formFeedback.style.color = "#a3c4ae";
 
