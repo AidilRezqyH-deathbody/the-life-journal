@@ -1,0 +1,5390 @@
+/* =========================================
+
+   A GARDEN OF MEMORIES
+
+   Vintage Storybook Theme
+
+========================================= */
+
+:root {
+
+    --garden-bg: #171b16;
+
+    --garden-green: #344536;
+
+    --garden-deep-green: #202c23;
+
+    --garden-cream: #eee3cc;
+
+    --garden-paper: #e5d5b8;
+
+    --garden-red: #873d42;
+
+    --garden-dark-red: #59282e;
+
+    --garden-text: #eee3cc;
+
+    --garden-muted: #b9ad97;
+
+    --garden-border: rgba(238, 227, 204, 0.25);
+
+}
+
+/* =========================================
+
+   GLOBAL RESET
+
+========================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    min-height: 100vh;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at top,
+
+            rgba(74, 91, 65, 0.25),
+
+            transparent 65%
+
+        ),
+
+        var(--garden-bg);
+
+    color: var(--garden-text);
+
+}
+
+/* =========================================
+
+   MAIN CONTAINER
+
+========================================= */
+
+.garden-container {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+/* =========================================
+
+   ACCESS SCREEN
+
+========================================= */
+
+.access-screen {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+
+}
+
+/* Decorative Flowers */
+
+.garden-decoration {
+
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+    color: #bd7775;
+
+    font-size: 30px;
+
+}
+
+.garden-decoration span:nth-child(2) {
+
+    font-size: 45px;
+
+    color: #a34e55;
+
+}
+
+/* Subtitle */
+
+.garden-subtitle {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    color: #bd9690;
+
+    margin-bottom: 20px;
+
+}
+
+/* Main Title */
+
+.access-screen h1,
+
+.gallery-header h1 {
+
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 500;
+
+    font-size: clamp(36px, 6vw, 65px);
+
+    line-height: 1.2;
+
+    color: var(--garden-cream);
+
+}
+
+/* Description */
+
+.access-description {
+
+    max-width: 390px;
+
+    margin-top: 22px;
+
+    font-size: 19px;
+
+    line-height: 1.7;
+
+    color: var(--garden-muted);
+
+}
+
+/* =========================================
+
+   ACCESS FORM
+
+========================================= */
+
+#access-form {
+
+    width: 100%;
+
+    max-width: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+}
+
+#access-code {
+
+    width: 100%;
+
+    padding: 16px 20px;
+
+    border: 1px solid var(--garden-border);
+
+    border-radius: 3px;
+
+    background: rgba(238, 227, 204, 0.06);
+
+    color: var(--garden-cream);
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 17px;
+
+    text-align: center;
+
+    outline: none;
+
+    transition: border-color 0.3s ease,
+
+                background 0.3s ease;
+
+}
+
+#access-code::placeholder {
+
+    color: #9f9685;
+
+}
+
+#access-code:focus {
+
+    border-color: #b87978;
+
+    background: rgba(238, 227, 204, 0.1);
+
+}
+
+/* Access Button */
+
+#access-button {
+
+    padding: 15px 20px;
+
+    border: 1px solid #a35b60;
+
+    border-radius: 3px;
+
+    background: var(--garden-red);
+
+    color: #fff0df;
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+#access-button:hover {
+
+    background: var(--garden-dark-red);
+
+    border-color: #c17d7d;
+
+    transform: translateY(-2px);
+
+}
+
+#access-button:disabled {
+
+    opacity: 0.6;
+
+    cursor: wait;
+
+    transform: none;
+
+}
+
+/* Access Message */
+
+.access-message {
+
+    min-height: 24px;
+
+    margin-top: 15px;
+
+    font-size: 16px;
+
+    color: #d18a88;
+
+}
+
+/* =========================================
+
+   FOOTER
+
+========================================= */
+
+.garden-footer {
+
+    position: absolute;
+
+    bottom: 30px;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+    color: #8f9687;
+
+    letter-spacing: 1px;
+
+}
+
+/* =========================================
+
+   GALLERY SCREEN
+
+========================================= */
+
+.gallery-screen {
+
+    min-height: 100vh;
+
+    padding: 80px 30px;
+
+}
+
+.gallery-header {
+
+    text-align: center;
+
+    margin-bottom: 65px;
+
+}
+
+.gallery-header p:last-child {
+
+    margin-top: 15px;
+
+    color: var(--garden-muted);
+
+    font-size: 19px;
+
+}
+
+/* Chapters */
+
+.chapters-container {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 60px;
+
+}
+
+/* Hidden State */
+
+.hidden {
+
+    display: none !important;
+
+}
+
+/* =========================================
+
+   RESPONSIVE DESIGN
+
+========================================= */
+
+@media (max-width: 600px) {
+
+    .access-screen {
+
+        padding: 30px 22px;
+
+    }
+
+    .garden-decoration {
+
+        margin-bottom: 25px;
+
+    }
+
+    .access-description {
+
+        font-size: 17px;
+
+        max-width: 310px;
+
+    }
+
+    .garden-footer {
+
+        font-size: 12px;
+
+        bottom: 20px;
+
+    }
+
+    .gallery-screen {
+
+        padding: 55px 20px;
+
+    }
+
+    .gallery-header {
+
+        margin-bottom: 45px;
+
+    }
+
+}
+
+/* =========================================
+
+   GALLERY LAYOUT
+
+========================================= */
+
+.gallery-screen {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 60px 25px;
+
+}
+
+.gallery-header {
+
+    text-align: center;
+
+    margin-bottom: 65px;
+
+}
+
+.gallery-header h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+    color: var(--garden-cream);
+
+    margin: 15px 0;
+
+}
+
+.gallery-header p {
+
+    color: var(--garden-muted);
+
+    line-height: 1.7;
+
+}
+
+.chapters-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 65px;
+
+}
+
+/* Chapter */
+
+.chapter-card {
+
+    padding: 35px;
+
+    border: 1px solid rgba(220, 200, 160, 0.2);
+
+    border-radius: 12px;
+
+    background: rgba(35, 43, 34, 0.75);
+
+}
+
+.chapter-card h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 2rem;
+
+    color: var(--garden-cream);
+
+    margin-bottom: 10px;
+
+}
+
+.chapter-card > p {
+
+    color: var(--garden-muted);
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+
+}
+
+/* Memories */
+
+.memories-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(
+
+        auto-fit,
+
+        minmax(min(100%, 260px), 1fr)
+
+    );
+
+    gap: 25px;
+
+}
+
+.memory-card {
+
+    padding: 14px;
+
+    background: var(--garden-cream);
+
+    border-radius: 5px;
+
+    color: #292b22;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease;
+
+}
+
+.memory-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+.memory-card img {
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    object-fit: cover;
+
+    border-radius: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+.memory-card h3 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.35rem;
+
+    margin-bottom: 8px;
+
+}
+
+.memory-card p {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.1rem;
+
+    line-height: 1.6;
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .gallery-screen {
+
+        padding: 40px 16px;
+
+    }
+
+    .gallery-header {
+
+        margin-bottom: 40px;
+
+    }
+
+    .chapter-card {
+
+        padding: 22px 16px;
+
+    }
+
+    .chapter-card h2 {
+
+        font-size: 1.7rem;
+
+    }
+
+    .memories-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+/* =========================================
+
+   BOOK COVER
+
+========================================= */
+
+.book-cover {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 650px;
+
+    min-height: 780px;
+
+    margin: 20px auto;
+
+    padding: 55px 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at center,
+
+            rgba(75, 96, 67, 0.7),
+
+            transparent 75%
+
+        ),
+
+        linear-gradient(
+
+            145deg,
+
+            #344536,
+
+            #17231a 75%
+
+        );
+
+    border: 8px double #a58a62;
+
+    outline: 1px solid rgba(238, 227, 204, 0.3);
+
+    outline-offset: -18px;
+
+    box-shadow:
+
+        0 25px 60px rgba(0, 0, 0, 0.5),
+
+        inset 0 0 45px rgba(0, 0, 0, 0.35);
+
+    border-radius: 5px;
+
+}
+
+.cover-ornament {
+
+    color: #c18b78;
+
+    font-size: 30px;
+
+    letter-spacing: 12px;
+
+}
+
+.cover-subtitle {
+
+    margin-top: 28px;
+
+    color: #d5b9a0;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+}
+
+.cover-image-frame {
+
+    width: min(270px, 85%);
+
+    aspect-ratio: 4 / 5;
+
+    margin: 35px auto 28px;
+
+    padding: 10px;
+
+    background: #e5d5b8;
+
+    border: 1px solid #b99c71;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+
+}
+
+.cover-image-placeholder {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #d6c5a7,
+
+            #bca887
+
+        );
+
+    color: #594b3a;
+
+}
+
+.cover-image-placeholder span {
+
+    font-size: 45px;
+
+    color: #873d42;
+
+}
+
+.cover-image-placeholder p {
+
+    max-width: 160px;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+}
+
+.cover-title {
+
+    max-width: 480px;
+
+    color: var(--garden-cream);
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(30px, 5vw, 45px);
+
+    font-weight: 500;
+
+    line-height: 1.25;
+
+}
+
+.cover-description {
+
+    margin-top: 15px;
+
+    color: #c7bba7;
+
+    font-size: 18px;
+
+    font-style: italic;
+
+}
+
+.cover-rose-decoration {
+
+    margin-top: 25px;
+
+    color: #c17d7d;
+
+    font-size: 25px;
+
+    letter-spacing: 8px;
+
+}
+
+.open-book-button {
+
+    margin-top: 35px;
+
+    padding: 15px 35px;
+
+    background: #873d42;
+
+    border: 1px solid #c18b78;
+
+    border-radius: 2px;
+
+    color: #fff0df;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+.open-book-button:hover {
+
+    background: #59282e;
+
+    transform: translateY(-3px);
+
+}
+
+.cover-footer {
+
+    margin-top: 25px;
+
+    color: #a99c87;
+
+    font-size: 14px;
+
+    font-style: italic;
+
+}
+
+/* Book Content */
+
+.book-content {
+
+    width: 100%;
+
+    animation: book-content-appear 0.7s ease;
+
+}
+
+@keyframes book-content-appear {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .book-cover {
+
+        min-height: 680px;
+
+        padding: 45px 25px;
+
+        outline-offset: -13px;
+
+    }
+
+    .cover-image-frame {
+
+        width: min(230px, 85%);
+
+        margin: 28px auto 23px;
+
+    }
+
+    .cover-subtitle {
+
+        letter-spacing: 3px;
+
+    }
+
+    .open-book-button {
+
+        padding: 14px 25px;
+
+    }
+
+}
+
+/* =========================================
+
+   OPEN BOOK DESIGN
+
+========================================= */
+
+.open-book {
+
+    width: 100%;
+
+    max-width: 1050px;
+
+    min-height: 580px;
+
+    margin: 40px auto 20px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    perspective: 1600px;
+
+    filter: drop-shadow(0 20px 25px rgba(0, 0, 0, 0.35));
+
+}
+
+.book-page {
+
+    position: relative;
+
+    min-height: 580px;
+
+    padding: 55px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+
+        radial-gradient(
+
+            ellipse at center,
+
+            rgba(255, 255, 255, 0.25),
+
+            transparent 75%
+
+        ),
+
+        #e5d5b8;
+
+    color: #40382d;
+
+    border: 1px solid #c4ad88;
+
+    overflow: hidden;
+
+}
+
+.left-page {
+
+    border-radius: 8px 0 0 8px;
+
+    background:
+
+        linear-gradient(
+
+            to right,
+
+            #d4c2a2,
+
+            #eee3cc 12%,
+
+            #e5d5b8
+
+        );
+
+    box-shadow: inset -12px 0 20px rgba(65, 48, 30, 0.12);
+
+}
+
+.right-page {
+
+    border-radius: 0 8px 8px 0;
+
+    background:
+
+        linear-gradient(
+
+            to left,
+
+            #d4c2a2,
+
+            #eee3cc 12%,
+
+            #e5d5b8
+
+        );
+
+    box-shadow: inset 12px 0 20px rgba(65, 48, 30, 0.12);
+
+}
+
+.page-decoration {
+
+    color: #873d42;
+
+    font-size: 35px;
+
+}
+
+.page-label {
+
+    margin-top: 20px;
+
+    color: #8b6c50;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+}
+
+.book-page h2 {
+
+    margin-top: 35px;
+
+    color: #344536;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(25px, 4vw, 38px);
+
+    font-weight: 500;
+
+}
+
+.page-divider {
+
+    margin: 25px 0;
+
+    color: #873d42;
+
+    font-size: 25px;
+
+}
+
+.book-page > p:not(.page-label) {
+
+    max-width: 300px;
+
+    color: #665746;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+}
+
+.page-rose-decoration {
+
+    margin-top: 45px;
+
+    font-size: 45px;
+
+}
+
+.page-number {
+
+    position: absolute;
+
+    bottom: 22px;
+
+    color: #947f62;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 16px;
+
+}
+
+.right-page-content {
+
+    width: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.page-placeholder {
+
+    width: 100%;
+
+    max-width: 280px;
+
+    aspect-ratio: 4 / 3;
+
+    margin-top: 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: rgba(174, 150, 111, 0.18);
+
+    border: 1px dashed #aa9270;
+
+}
+
+.page-placeholder span {
+
+    color: #873d42;
+
+    font-size: 40px;
+
+}
+
+.page-placeholder p {
+
+    color: #76634d;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+}
+
+/* BOOK NAVIGATION */
+
+.book-navigation {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: 30px auto;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+.book-navigation button {
+
+    padding: 12px 20px;
+
+    color: #eee3cc;
+
+    background: #344536;
+
+    border: 1px solid #8d785c;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+}
+
+.book-navigation button:hover:not(:disabled) {
+
+    background: #873d42;
+
+}
+
+.book-navigation button:disabled {
+
+    opacity: 0.35;
+
+    cursor: not-allowed;
+
+}
+
+#page-indicator {
+
+    color: #c9bba5;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .open-book {
+
+        min-height: 440px;
+
+        margin-top: 25px;
+
+    }
+
+    .book-page {
+
+        min-height: 440px;
+
+        padding: 35px 14px;
+
+    }
+
+    .book-page h2 {
+
+        margin-top: 25px;
+
+        font-size: 23px;
+
+    }
+
+    .book-page > p:not(.page-label) {
+
+        font-size: 17px;
+
+    }
+
+    .page-label {
+
+        font-size: 8px;
+
+        letter-spacing: 2px;
+
+    }
+
+    .page-rose-decoration {
+
+        margin-top: 25px;
+
+        font-size: 30px;
+
+    }
+
+    .page-placeholder {
+
+        margin-top: 30px;
+
+    }
+
+    .book-navigation button {
+
+        padding: 11px 12px;
+
+        font-size: 9px;
+
+    }
+
+}
+
+/* =========================================
+
+   VINTAGE MEMORY PHOTO FRAME
+
+========================================= */
+
+.memory-photo-frame {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 340px;
+
+    height: 350px;
+
+    margin: 24px auto 0;
+
+    padding: 13px;
+
+    box-sizing: border-box;
+
+    background: #e5d5b8;
+
+    border: 1px solid #a98a60;
+
+    box-shadow:
+
+        0 7px 18px rgba(50, 35, 20, 0.20),
+
+        inset 0 0 0 3px #f2e6cf,
+
+        inset 0 0 0 4px #c4a77e;
+
+}
+
+/* Photo */
+
+.book-memory-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background: #d9c8aa;
+
+}
+
+/* Decorative corners */
+
+.memory-photo-frame::before,
+
+.memory-photo-frame::after {
+
+    position: absolute;
+
+    z-index: 2;
+
+    color: #873d42;
+
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    pointer-events: none;
+
+}
+
+.memory-photo-frame::before {
+
+    content: "❧";
+
+    top: 2px;
+
+    left: 5px;
+
+}
+
+.memory-photo-frame::after {
+
+    content: "❧";
+
+    bottom: 2px;
+
+    right: 5px;
+
+    transform: rotate(180deg);
+
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .memory-photo-frame {
+
+        height: 280px;
+
+        max-width: 100%;
+
+        margin-top: 20px;
+
+        padding: 10px;
+
+    }
+
+}
+
+/* =========================================
+
+   A GARDEN OF MEMORIES — BOOK DECORATION
+
+========================================= */
+
+/* The open book */
+
+.open-book {
+
+    position: relative;
+
+    isolation: isolate;
+
+}
+
+/* Central book spine */
+
+.open-book::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 8px;
+
+    bottom: 8px;
+
+    left: 50%;
+
+    width: 18px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(
+
+        to right,
+
+        rgba(91, 65, 42, 0.04),
+
+        rgba(91, 65, 42, 0.20),
+
+        rgba(91, 65, 42, 0.04)
+
+    );
+
+    z-index: 3;
+
+    pointer-events: none;
+
+}
+
+/* Parchment page details */
+
+.open-book > .book-page {
+    position: relative;
+    border: 1px solid rgba(130, 99, 65, 0.35);
+}
+
+/* Rose ornaments on page corners */
+
+.open-book > .book-page::before {
+
+    content: "✿";
+
+    position: absolute;
+
+    top: 13px;
+
+    right: 17px;
+
+    color: #873d42;
+
+    font-size: 23px;
+
+    opacity: 0.75;
+
+    pointer-events: none;
+
+}
+
+.open-book > .book-page::after {
+
+    content: "❧";
+
+    position: absolute;
+
+    bottom: 12px;
+
+    left: 17px;
+
+    color: #873d42;
+
+    font-size: 25px;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+
+}
+
+/* Classic title typography */
+
+#left-page-title {
+
+    color: #593b2e;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    letter-spacing: 0.4px;
+
+}
+
+/* Gentle divider below the page heading */
+
+#left-page-title::after {
+
+    content: "";
+
+    display: block;
+
+    width: 65px;
+
+    height: 1px;
+
+    margin-top: 12px;
+
+    background: #a77d57;
+
+}
+
+/* Page text */
+
+#left-page-description {
+
+    color: #65513e;
+
+    line-height: 1.9;
+    white-space: pre-line;
+
+}
+
+/* Chapter label */
+
+.page-label {
+
+    color: #873d42;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-style: italic;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+
+}
+
+/* Page number */
+
+.page-number {
+
+    color: #92785b;
+
+    font-family: Georgia, serif;
+
+    font-size: 12px;
+
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 650px) {
+
+    .open-book::before {
+
+        width: 10px;
+
+    }
+
+    .open-book > .book-page::before {
+
+        top: 8px;
+
+        right: 10px;
+
+        font-size: 18px;
+
+    }
+
+    .open-book > .book-page::after {
+
+        bottom: 8px;
+
+        left: 10px;
+
+        font-size: 20px;
+
+    }
+
+}
+
+
+/* =========================================
+   CHAPTER STORYBOOK SPREAD
+   A GARDEN OF MEMORIES
+========================================= */
+
+/* Left page story layout */
+
+.left-page {
+    justify-content: flex-start;
+}
+
+#left-page-title {
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.2;
+    margin-top: 22px;
+}
+
+#left-page-description {
+    width: 100%;
+    max-width: 350px;
+    font-size: 18px;
+    line-height: 1.55;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    margin-top: 15px;
+}
+
+/* First chapter screenshot */
+
+.chapter-feature-frame {
+    position: relative;
+    width: 100%;
+    max-width: 260px;
+    height: 145px;
+    padding: 8px;
+    margin: 12px auto 5px;
+
+    background: #e5d5b8;
+    border: 1px solid #a98a60;
+
+    box-shadow:
+        0 5px 15px rgba(50, 35, 20, 0.18),
+        inset 0 0 0 2px #f2e6cf;
+}
+
+.chapter-feature-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: #d9c8aa;
+}
+
+/* Right page gallery */
+
+.right-page {
+    padding: 35px 28px;
+}
+
+.right-page-content {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-page-content > .page-label {
+    margin: 12px 0 18px;
+}
+
+/* Photo grid */
+
+.memory-gallery-grid {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Individual photo frames */
+
+.memory-gallery-grid .memory-photo-frame {
+    width: 100%;
+    max-width: none;
+    height: 145px;
+
+    margin: 0;
+    padding: 8px;
+
+    min-width: 0;
+    overflow: hidden;
+}
+
+.memory-gallery-grid .book-memory-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Chapter 1: two photos above, one wide photo below */
+
+.chapter-one-gallery {
+    grid-template-rows: repeat(2, 165px);
+}
+
+.chapter-one-gallery .memory-photo-frame {
+    height: 165px;
+}
+
+.chapter-one-gallery .memory-photo-frame:nth-child(3) {
+    grid-column: 1 / -1;
+}
+
+/* Other chapters */
+
+.standard-chapter-gallery.count-1 {
+    grid-template-columns: 1fr;
+}
+
+.standard-chapter-gallery.count-2 {
+    grid-template-rows: 180px;
+}
+
+.standard-chapter-gallery.count-3,
+.standard-chapter-gallery.count-4 {
+    grid-auto-rows: 145px;
+}
+
+.standard-chapter-gallery.count-5,
+.standard-chapter-gallery.count-6 {
+    grid-auto-rows: 120px;
+}
+
+/* Remove the old single-photo spacing */
+
+.memory-gallery-grid .memory-photo-frame::before {
+    top: 1px;
+    left: 3px;
+    font-size: 18px;
+}
+
+.memory-gallery-grid .memory-photo-frame::after {
+    bottom: 1px;
+    right: 3px;
+    font-size: 18px;
+}
+
+/* Navigation indicator */
+
+#page-indicator {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* =========================================
+   MOBILE ADJUSTMENTS
+========================================= */
+
+@media (max-width: 650px) {
+
+    .open-book {
+        grid-template-columns: 1fr 1fr;
+        min-height: 500px;
+    }
+
+    .book-page {
+        min-height: 500px;
+        padding: 32px 12px;
+    }
+
+    .left-page {
+        justify-content: flex-start;
+    }
+
+    #left-page-title {
+        font-size: 21px;
+        margin-top: 18px;
+    }
+
+    #left-page-description {
+        font-size: 15px;
+        line-height: 1.45;
+        margin-top: 12px;
+    }
+
+    .chapter-feature-frame {
+        height: 115px;
+        padding: 6px;
+        margin-top: 10px;
+    }
+
+    .right-page {
+        padding: 30px 12px;
+    }
+
+    .right-page-content > .page-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+        margin: 12px 0;
+    }
+
+    .memory-gallery-grid {
+        gap: 8px;
+    }
+
+    .chapter-one-gallery {
+        grid-template-rows: repeat(2, 125px);
+    }
+
+    .chapter-one-gallery .memory-photo-frame {
+        height: 125px;
+        padding: 5px;
+    }
+
+    .standard-chapter-gallery.count-2 {
+        grid-template-rows: 155px;
+    }
+
+    .standard-chapter-gallery.count-3,
+    .standard-chapter-gallery.count-4 {
+        grid-auto-rows: 125px;
+    }
+
+    .standard-chapter-gallery.count-5,
+    .standard-chapter-gallery.count-6 {
+        grid-auto-rows: 105px;
+    }
+
+    .memory-gallery-grid .memory-photo-frame {
+        height: 100%;
+        padding: 5px;
+    }
+
+    .book-navigation {
+        gap: 8px;
+    }
+
+    .book-navigation button {
+        padding: 10px 9px;
+        font-size: 8px;
+    }
+
+    #page-indicator {
+        font-size: 10px;
+        letter-spacing: 0;
+    }
+}
+
+/* Small phone screens */
+
+@media (max-width: 380px) {
+
+    .book-page {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    #left-page-title {
+        font-size: 18px;
+    }
+
+    #left-page-description {
+        font-size: 13px;
+    }
+
+    .chapter-feature-frame {
+        height: 95px;
+    }
+
+    .chapter-one-gallery {
+        grid-template-rows: repeat(2, 110px);
+    }
+
+    .chapter-one-gallery .memory-photo-frame {
+        height: 110px;
+    }
+}
+
+
+/* =========================================
+   STORY SPREAD
+========================================= */
+
+.left-page {
+    justify-content: flex-start;
+}
+
+#left-page-title {
+    margin-top: 18px;
+    line-height: 1.2;
+}
+
+#left-page-description,
+.story-continuation-text {
+    width: 100%;
+    max-width: 360px;
+    margin: 18px auto 0;
+
+    font-size: 17px;
+    line-height: 1.65;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+}
+
+#left-page-description {
+    max-height: 58%;
+    overflow-y: auto;
+    padding: 0 5px 12px;
+}
+
+.story-continuation-title {
+    margin: 25px 0 0;
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.story-continuation-text {
+    max-height: 65%;
+    overflow-y: auto;
+    padding: 0 8px 12px;
+}
+
+.right-page-content {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-page-content > .page-label {
+    flex: 0 0 auto;
+    margin: 12px 0 18px;
+}
+
+
+/* =========================================
+   PHOTO SPREAD
+========================================= */
+
+.chapter-left-gallery,
+.memory-gallery-grid {
+    width: 100%;
+    min-height: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.chapter-left-gallery {
+    flex: 1;
+    max-height: 68%;
+    margin: 12px auto 24px;
+    padding: 0 8px;
+}
+
+.memory-gallery-grid {
+    flex: 1;
+    max-height: 100%;
+    padding: 0 4px 22px;
+}
+
+/* All image frames */
+
+.memory-gallery-grid .memory-photo-frame,
+.chapter-left-gallery .memory-photo-frame {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    min-width: 0;
+
+    margin: 0;
+    padding: 7px;
+
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.memory-gallery-grid .book-memory-image,
+.chapter-left-gallery .book-memory-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: rgba(90, 75, 55, 0.06);
+}
+
+/* Screenshot: 9:16 */
+
+.chapter-left-gallery .ratio-9-16 {
+    width: min(100%, 190px);
+    aspect-ratio: 9 / 16;
+    justify-self: center;
+}
+
+/* Portrait photo: 3:4 */
+
+.memory-gallery-grid .ratio-3-4 {
+    aspect-ratio: 3 / 4;
+}
+
+/* Landscape photos: 4:3 */
+
+.memory-gallery-grid .ratio-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+/* Chapter 1 right page:
+   portrait photo above,
+   two landscape photos below. */
+
+.chapter-one-gallery.gallery-right {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    align-content: center;
+    gap: 12px;
+}
+
+.chapter-one-gallery.gallery-right .ratio-3-4 {
+    grid-column: 1 / -1;
+    width: min(52%, 175px);
+    justify-self: center;
+}
+
+.chapter-one-gallery.gallery-right .ratio-4-3 {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+/* Other chapters: flexible photo layout */
+
+.standard-chapter-gallery {
+    grid-auto-rows: auto;
+}
+
+.standard-chapter-gallery .memory-photo-frame {
+    aspect-ratio: 4 / 3;
+}
+
+/* Page numbers stay above the photo layout */
+
+.book-page .page-number {
+    z-index: 2;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .book-page {
+        min-width: 0;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    #left-page-title {
+        font-size: 21px;
+        margin-top: 14px;
+    }
+
+    #left-page-description,
+    .story-continuation-text {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 13px;
+    }
+
+    .story-continuation-title {
+        font-size: 19px;
+        margin-top: 20px;
+    }
+
+    .chapter-left-gallery,
+    .memory-gallery-grid {
+        gap: 8px;
+    }
+
+    .chapter-left-gallery {
+        max-height: 65%;
+        padding: 0 3px;
+    }
+
+    .chapter-left-gallery .ratio-9-16 {
+        width: min(100%, 135px);
+    }
+
+    .chapter-one-gallery.gallery-right {
+        gap: 8px;
+    }
+
+    .chapter-one-gallery.gallery-right .ratio-3-4 {
+        width: min(58%, 125px);
+    }
+
+    .memory-gallery-grid .memory-photo-frame,
+    .chapter-left-gallery .memory-photo-frame {
+        padding: 5px;
+    }
+
+    .right-page-content > .page-label {
+        font-size: 8px;
+        letter-spacing: 1px;
+        margin: 10px 0 12px;
+    }
+
+    .memory-gallery-grid {
+        padding-bottom: 18px;
+    }
+
+    #page-indicator {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .book-page {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    #left-page-title {
+        font-size: 18px;
+    }
+
+    #left-page-description,
+    .story-continuation-text {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .chapter-left-gallery .ratio-9-16 {
+        width: min(100%, 115px);
+    }
+
+    .chapter-one-gallery.gallery-right .ratio-3-4 {
+        width: min(62%, 110px);
+    }
+}
+
+
+
+/* =====================================================
+   FINAL BOOK LAYOUT OVERRIDES
+   These rules intentionally override older gallery rules
+   above, so the book uses one consistent layout.
+===================================================== */
+
+/* Keep both pages at the same height and preserve the book look. */
+.open-book {
+    align-items: stretch;
+}
+
+.book-page {
+    min-width: 0;
+    min-height: 620px;
+    height: 620px;
+    padding: 42px 34px 48px;
+    overflow: hidden;
+}
+
+.left-page,
+.right-page {
+    justify-content: flex-start;
+}
+
+#left-page-title {
+    flex: 0 0 auto;
+    margin-top: 18px;
+    font-size: clamp(25px, 3vw, 35px);
+}
+
+#left-page-description,
+.story-continuation-text {
+    width: 100%;
+    max-width: 360px;
+    margin: 20px auto 0;
+    color: #65513e;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    line-height: 1.65;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #b99c71 transparent;
+}
+
+#left-page-description {
+    max-height: 390px;
+    padding: 0 8px 12px;
+}
+
+.right-page-content {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-page-content > .page-label {
+    flex: 0 0 auto;
+    margin: 14px 0 12px;
+}
+
+.story-continuation-title {
+    flex: 0 0 auto;
+    margin: 22px 0 0;
+    color: #593b2e;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.story-continuation-text {
+    flex: 0 1 auto;
+    max-height: 300px;
+    margin-top: 16px;
+    padding: 0 8px 8px;
+}
+
+.story-poetic-ending {
+    flex: 0 0 auto;
+    width: 90%;
+    max-width: 330px;
+    margin: auto 0 42px;
+    padding-top: 16px;
+    color: #873d42;
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.page-rose-decoration {
+    flex: 0 0 auto;
+}
+
+/* Photo spread: both pages use the same gallery foundation. */
+.chapter-left-gallery,
+.memory-gallery-grid {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    gap: 14px;
+}
+
+.chapter-left-gallery {
+    flex: 1 1 auto;
+    margin: 14px auto 24px;
+    padding: 0 4px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.memory-gallery-grid {
+    flex: 1 1 auto;
+    padding: 0 4px 24px;
+}
+
+/* Every photo keeps its full image: no cropping. */
+.chapter-left-gallery .memory-photo-frame,
+.memory-gallery-grid .memory-photo-frame {
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 8px;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.chapter-left-gallery .book-memory-image,
+.memory-gallery-grid .book-memory-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    background: rgba(90, 75, 55, 0.06);
+}
+
+/* Chapter 1: screenshot and portrait image share the left page. */
+.chapter-left-gallery .ratio-9-16 {
+    width: min(100%, 170px);
+    aspect-ratio: 9 / 16;
+    justify-self: center;
+}
+
+.chapter-left-gallery .ratio-3-4 {
+    aspect-ratio: 3 / 4;
+}
+
+/* Chapter 1: two landscape pictures are stacked on the right page. */
+.chapter-one-gallery.gallery-right {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, auto));
+    align-content: center;
+    justify-items: center;
+    gap: 14px;
+}
+
+.chapter-one-gallery.gallery-right .ratio-4-3 {
+    width: min(100%, 270px);
+    aspect-ratio: 4 / 3;
+}
+
+/* Other chapters use a balanced two-column grid on each page. */
+.standard-chapter-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: min-content;
+    align-content: center;
+}
+
+.standard-chapter-gallery.count-1 {
+    grid-template-columns: minmax(0, 1fr);
+}
+
+.standard-chapter-gallery .memory-photo-frame {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.gallery-empty-message {
+    grid-column: 1 / -1;
+    align-self: center;
+    max-width: 230px;
+    color: #76634d;
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Keep page numbers visible above the gallery. */
+.book-page .page-number {
+    z-index: 4;
+    bottom: 18px;
+}
+
+/* The spine must not cover photo frames or story text. */
+.open-book::before {
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Tablet and mobile */
+@media (max-width: 650px) {
+    .open-book {
+        min-height: 540px;
+    }
+
+    .book-page {
+        min-height: 540px;
+        height: 540px;
+        padding: 30px 13px 42px;
+    }
+
+    #left-page-title {
+        margin-top: 14px;
+        font-size: 21px;
+    }
+
+    #left-page-description,
+    .story-continuation-text {
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    #left-page-description {
+        max-height: 345px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .story-continuation-title {
+        margin-top: 18px;
+        font-size: 19px;
+    }
+
+    .story-continuation-text {
+        max-height: 275px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .story-poetic-ending {
+        width: 94%;
+        margin-bottom: 38px;
+        font-size: 13px;
+    }
+
+    .chapter-left-gallery,
+    .memory-gallery-grid {
+        gap: 8px;
+    }
+
+    .chapter-left-gallery {
+        padding: 0 1px;
+    }
+
+    .chapter-left-gallery .ratio-9-16 {
+        width: min(100%, 112px);
+    }
+
+    .chapter-one-gallery.gallery-right {
+        gap: 10px;
+    }
+
+    .chapter-one-gallery.gallery-right .ratio-4-3 {
+        width: min(100%, 190px);
+    }
+
+    .chapter-left-gallery .memory-photo-frame,
+    .memory-gallery-grid .memory-photo-frame {
+        padding: 5px;
+    }
+
+    .right-page-content > .page-label {
+        margin: 10px 0 8px;
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+    #page-indicator {
+        font-size: 9px;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .book-page {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    #left-page-title {
+        font-size: 18px;
+    }
+
+    #left-page-description,
+    .story-continuation-text {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .chapter-left-gallery .ratio-9-16 {
+        width: min(100%, 92px);
+    }
+
+    .chapter-one-gallery.gallery-right .ratio-4-3 {
+        width: min(100%, 155px);
+    }
+
+    .story-poetic-ending {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================
+   STORY SPREAD — REFINED LAYOUT
+========================================= */
+
+/* LEFT PAGE */
+
+.left-page {
+    justify-content: flex-start;
+}
+
+#left-page-title {
+    width: 100%;
+    margin-top: 18px;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.2;
+    text-align: center;
+}
+
+#left-page-description {
+    width: 100%;
+    max-width: 350px;
+    max-height: 65%;
+    margin: 20px auto 0;
+    padding: 0 8px 12px;
+
+    color: #65513e;
+    font-size: 18px;
+    line-height: 1.7;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+
+    overflow-y: auto;
+}
+
+/* RIGHT PAGE */
+
+.right-page-content {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-page-content > .page-label {
+    flex: 0 0 auto;
+    margin: 15px 0 18px;
+}
+
+.story-continuation-title {
+    flex: 0 0 auto;
+    margin: 12px 0 0;
+
+    color: #593b2e;
+    font-family: "Playfair Display", serif;
+    font-size: 23px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.story-continuation-text {
+    width: 100%;
+    max-width: 350px;
+    flex: 1;
+    min-height: 0;
+
+    margin: 16px auto 0;
+    padding: 0 8px 10px;
+
+    color: #65513e;
+    font-size: 17px;
+    line-height: 1.65;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+
+    overflow-y: auto;
+}
+
+/* POETIC CLOSING */
+
+.story-poetic-closing {
+    flex: 0 0 auto;
+
+    width: 90%;
+    max-width: 300px;
+
+    margin: 12px auto 32px;
+    padding: 13px 10px;
+
+    border-top: 1px solid rgba(135, 61, 66, 0.35);
+
+    color: #873d42;
+    font-family: "Playfair Display", serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* MOBILE STORY LAYOUT */
+
+@media (max-width: 650px) {
+
+    #left-page-description {
+        margin-top: 14px;
+        font-size: 14px;
+        line-height: 1.55;
+    }
+
+    .story-continuation-title {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .story-continuation-text {
+        margin-top: 12px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .story-poetic-closing {
+        width: 95%;
+        margin: 8px auto 25px;
+        padding: 9px 5px;
+        font-size: 12px;
+        line-height: 1.45;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #left-page-description {
+        font-size: 12px;
+        line-height: 1.45;
+    }
+
+    .story-continuation-text {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+    .story-poetic-closing {
+        font-size: 11px;
+    }
+}
+
+
+/* CHAPTER 1 — SCREENSHOT NOTE */
+
+.chapter-one-gallery.gallery-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 0;
+}
+
+.chapter-one-gallery.gallery-left .ratio-9-16 {
+    width: min(100%, 190px);
+    aspect-ratio: 9 / 16;
+}
+
+.screenshot-note {
+    flex: 0 0 auto;
+    width: 90%;
+    max-width: 260px;
+    margin: 10px auto 30px;
+    color: #873d42;
+    font-family: "Playfair Display", serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+}
+
+@media (max-width: 650px) {
+    .chapter-one-gallery.gallery-left .ratio-9-16 {
+        width: min(100%, 155px);
+    }
+
+    .screenshot-note {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   FINAL PHOTO SPREAD REFINEMENT
+   Chapter 1 — Desktop & Mobile
+===================================================== */
+
+/* Keep photo galleries within the book pages. */
+.chapter-left-gallery,
+.memory-gallery-grid {
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    box-sizing: border-box;
+    gap: 14px;
+}
+
+/* ---------------------------------
+   LEFT PAGE — CHAT SCREENSHOT
+--------------------------------- */
+
+.chapter-one-gallery.gallery-left {
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    justify-items: center;
+    padding: 0 8px 24px;
+}
+
+.chapter-one-gallery.gallery-left .ratio-9-16 {
+    width: min(100%, 165px);
+    max-width: 165px;
+    aspect-ratio: 9 / 16;
+    justify-self: center;
+}
+
+/* ---------------------------------
+   RIGHT PAGE — THREE PHOTOS
+--------------------------------- */
+
+.chapter-one-gallery.gallery-right {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    align-content: center;
+    justify-items: center;
+    gap: 12px;
+    padding: 0 4px 24px;
+}
+
+/* Portrait photo centered at the top. */
+.chapter-one-gallery.gallery-right .ratio-3-4 {
+    grid-column: 1 / -1;
+    width: min(42%, 145px);
+    max-width: 145px;
+    aspect-ratio: 3 / 4;
+    justify-self: center;
+}
+
+/* Two landscape photos side by side. */
+.chapter-one-gallery.gallery-right .ratio-4-3 {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+/* ---------------------------------
+   PHOTO FRAME
+--------------------------------- */
+
+.chapter-one-gallery .memory-photo-frame {
+    min-width: 0;
+    height: auto;
+    box-sizing: border-box;
+    padding: 7px;
+    overflow: hidden;
+}
+
+.chapter-one-gallery .book-memory-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* ---------------------------------
+   MOBILE REFINEMENT
+--------------------------------- */
+
+@media (max-width: 650px) {
+
+    .chapter-left-gallery,
+    .memory-gallery-grid {
+        gap: 8px;
+    }
+
+    .chapter-one-gallery.gallery-left {
+        padding: 0 2px 20px;
+    }
+
+    .chapter-one-gallery.gallery-left .ratio-9-16 {
+        width: min(100%, 112px);
+    }
+
+    .chapter-one-gallery.gallery-right {
+        gap: 8px;
+        padding: 0 1px 20px;
+    }
+
+    .chapter-one-gallery.gallery-right .ratio-3-4 {
+        width: min(48%, 105px);
+    }
+
+    .chapter-one-gallery .memory-photo-frame {
+        padding: 5px;
+    }
+}
+
+/* ---------------------------------
+   SMALL MOBILE
+--------------------------------- */
+
+@media (max-width: 380px) {
+
+    .chapter-one-gallery.gallery-left .ratio-9-16 {
+        width: min(100%, 95px);
+    }
+
+    .chapter-one-gallery.gallery-right {
+        gap: 6px;
+    }
+
+    .chapter-one-gallery.gallery-right .ratio-3-4 {
+        width: min(52%, 90px);
+    }
+
+    .chapter-one-gallery .memory-photo-frame {
+        padding: 4px;
+    }
+}
+
+
+/* =========================================
+   FIX — CHAPTER 1 PHOTO GRID
+========================================= */
+
+/* Susunan foto pada halaman kanan */
+.chapter-one-gallery.gallery-right {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto auto;
+    align-content: center;
+    justify-items: center;
+    gap: 12px;
+}
+
+/* Foto portrait berada di baris pertama */
+.chapter-one-gallery.gallery-right .ratio-3-4 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    width: min(42%, 145px);
+    aspect-ratio: 3 / 4;
+}
+
+/* Dua foto landscape berada berdampingan */
+.chapter-one-gallery.gallery-right .ratio-4-3 {
+    grid-column: auto;
+    grid-row: 2;
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+/* Pastikan gambar tidak terpotong */
+.chapter-one-gallery.gallery-right .memory-photo-frame {
+    height: auto;
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.chapter-one-gallery.gallery-right .book-memory-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .chapter-one-gallery.gallery-right {
+        gap: 8px;
+    }
+
+    .chapter-one-gallery.gallery-right .ratio-3-4 {
+        width: min(48%, 105px);
+    }
+}
+
+
+/* =========================================
+   CHAPTER 1 — SCREENSHOT SIZE
+========================================= */
+
+.chapter-one-gallery.gallery-left .ratio-9-16 {
+    width: min(100%, 220px);
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    justify-self: center;
+}
+
+.chapter-one-gallery.gallery-left .ratio-9-16 .book-memory-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   MOBILE — VERTICAL PHOTO GALLERY
+========================================= */
+
+@media (max-width: 650px) {
+
+    /* Screenshot pada halaman kiri */
+    .chapter-one-gallery.gallery-left .ratio-9-16 {
+        width: min(100%, 155px);
+        max-width: 155px;
+        aspect-ratio: 9 / 16;
+    }
+
+    /* Galeri kanan menjadi satu kolom */
+    .chapter-one-gallery.gallery-right {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: auto auto auto;
+        align-content: start;
+        justify-items: center;
+        gap: 12px;
+        padding: 5px 4px 30px;
+    }
+
+    /* Foto portrait di urutan pertama */
+    .chapter-one-gallery.gallery-right .ratio-3-4 {
+        grid-column: 1;
+        grid-row: 1;
+        width: min(100%, 125px);
+        max-width: 125px;
+        aspect-ratio: 3 / 4;
+    }
+
+    /* Foto landscape pertama dan kedua */
+    .chapter-one-gallery.gallery-right .ratio-4-3 {
+        grid-column: 1;
+        grid-row: auto;
+        width: min(100%, 165px);
+        max-width: 165px;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Bingkai mengikuti ukuran foto */
+    .chapter-one-gallery.gallery-right .memory-photo-frame {
+        height: auto;
+        margin: 0;
+        padding: 5px;
+    }
+
+    .chapter-one-gallery.gallery-right .book-memory-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE BOOK — FULL WIDTH PAGES
+========================================= */
+
+@media (max-width: 650px) {
+
+    /* Halaman buku disusun ke bawah */
+    .open-book {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        min-height: 0;
+        filter: drop-shadow(0 12px 18px rgba(0, 0, 0, 0.3));
+    }
+
+    .open-book::before {
+        display: none;
+    }
+
+    /* Setiap halaman menggunakan lebar penuh */
+    .book-page {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+        min-height: 540px;
+        padding: 32px 18px 48px;
+        border-radius: 7px;
+    }
+
+    .left-page,
+    .right-page {
+        border-radius: 7px;
+    }
+
+    /* Screenshot lebih besar */
+    .chapter-one-gallery.gallery-left {
+        width: 100%;
+        max-height: none;
+        padding: 0 5px 25px;
+    }
+
+    .chapter-one-gallery.gallery-left .ratio-9-16 {
+        width: min(100%, 190px);
+        max-width: 190px;
+        aspect-ratio: 9 / 16;
+    }
+
+    /* Halaman kanan */
+    .right-page-content {
+        height: auto;
+        min-height: 0;
+    }
+
+    /* Foto disusun vertikal tanpa saling menimpa */
+    .chapter-one-gallery.gallery-right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 18px;
+        width: 100%;
+        padding: 8px 0 30px;
+    }
+
+    .chapter-one-gallery.gallery-right .memory-photo-frame {
+        flex: 0 0 auto;
+        height: auto;
+        margin: 0;
+    }
+
+    /* Foto portrait */
+    .chapter-one-gallery.gallery-right .ratio-3-4 {
+        width: min(100%, 165px);
+        max-width: 165px;
+        aspect-ratio: 3 / 4;
+    }
+
+    /* Dua foto landscape */
+    .chapter-one-gallery.gallery-right .ratio-4-3 {
+        width: min(100%, 240px);
+        max-width: 240px;
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Gambar mengikuti bingkai */
+    .chapter-one-gallery .book-memory-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+}
+
+/* Small mobile */
+@media (max-width: 380px) {
+
+    .chapter-one-gallery.gallery-left .ratio-9-16 {
+        width: min(100%, 165px);
+    }
+
+    .chapter-one-gallery.gallery-right .ratio-3-4 {
+        width: min(100%, 145px);
+    }
+
+    .chapter-one-gallery.gallery-right .ratio-4-3 {
+        width: min(100%, 210px);
+    }
+
+}
+/* ===================================
+   DESKTOP SCREENSHOT SIZE FIX
+=================================== */
+
+@media (min-width: 651px) {
+    .chapter-one-gallery.gallery-left.chapter-left-gallery {
+        flex: 0 0 auto;
+        max-height: none;
+        width: 100%;
+        margin: 12px auto 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chapter-one-gallery.gallery-left .ratio-9-16 {
+        width: 150px;
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 9 / 16;
+    }
+
+    .chapter-one-gallery.gallery-left .memory-photo-frame {
+        height: auto;
+        max-height: 270px;
+    }
+
+    .chapter-one-gallery.gallery-left .book-memory-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+}
+
+
+/* =====================================================
+   CHAPTER 4 — CLOSING SPREAD
+   A GARDEN OF MEMORIES
+   Vintage Storybook Refinement
+===================================================== */
+
+/* ---------------------------------
+   LEFT PAGE — HEARTFELT THANK YOU
+--------------------------------- */
+
+.chapter-closing-left {
+    justify-content: flex-start;
+    padding-top: 42px;
+    padding-bottom: 48px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 45%,
+            rgba(255, 250, 235, 0.35),
+            transparent 72%
+        ),
+        linear-gradient(
+            to right,
+            #d4c2a2,
+            #eee3cc 12%,
+            #e5d5b8
+        );
+}
+
+/* Label */
+
+.chapter-closing-left .page-label {
+    margin-top: 22px;
+    margin-bottom: 12px;
+
+    color: #986b61;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+/* Main heading */
+
+.chapter-closing-left #left-page-title {
+    width: 100%;
+    margin-top: 14px;
+
+    color: #593b2e;
+    font-size: clamp(25px, 3vw, 34px);
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+}
+
+/* Decorative divider */
+
+.chapter-closing-left #left-page-title::after {
+    width: 75px;
+    height: 1px;
+    margin: 14px auto 0;
+
+    background: linear-gradient(
+        to right,
+        transparent,
+        #a77d57,
+        transparent
+    );
+}
+
+/* Left page body */
+
+.chapter-closing-left #left-page-description,
+.chapter-closing-left .closing-page-text {
+    width: 100%;
+    max-width: 365px;
+    max-height: none;
+
+    margin: 22px auto 0;
+    padding: 0 10px 8px;
+
+    color: #65513e;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px;
+    line-height: 1.75;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+
+    overflow-y: visible;
+    scrollbar-width: none;
+}
+
+.chapter-closing-left #left-page-description::-webkit-scrollbar,
+.chapter-closing-left .closing-page-text::-webkit-scrollbar {
+    display: none;
+}
+
+/* ---------------------------------
+   RIGHT PAGE — UNTIL WE MEET AGAIN
+--------------------------------- */
+
+.chapter-closing-right {
+    justify-content: flex-start;
+    padding: 42px 38px 48px;
+
+    background:
+        radial-gradient(
+            ellipse at 50% 40%,
+            rgba(255, 250, 235, 0.35),
+            transparent 72%
+        ),
+        linear-gradient(
+            to left,
+            #d4c2a2,
+            #eee3cc 12%,
+            #e5d5b8
+        );
+}
+
+/* Right page label */
+
+.chapter-closing-right .page-label {
+    margin: 22px 0 15px;
+
+    color: #986b61;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+}
+
+/* Right page title */
+
+.chapter-closing-right .closing-page-title {
+    margin: 8px 0 0;
+
+    color: #593b2e;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.35;
+    text-align: center;
+}
+
+/* Right page body */
+
+.chapter-closing-right .closing-page-text {
+    width: 100%;
+    max-width: 390px;
+    max-height: none;
+
+    margin: 18px auto 0;
+    padding: 0 5px;
+
+    color: #65513e;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    text-align: center;
+    white-space: pre-line;
+    overflow-wrap: break-word;
+    overflow-y: visible;
+}
+
+/* Closing quotation */
+
+.chapter-closing-right .closing-page-quote {
+    position: relative;
+
+    width: 90%;
+    max-width: 340px;
+
+    margin: auto auto 42px;
+    padding: 20px 12px 8px;
+
+    border-top: 1px solid rgba(135, 61, 66, 0.35);
+
+    color: #873d42;
+    font-family: "Playfair Display", serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Small ornamental separator */
+
+.chapter-closing-right .closing-page-quote::before {
+    content: "❧";
+
+    position: absolute;
+    top: -16px;
+    left: 50%;
+
+    padding: 0 12px;
+    transform: translateX(-50%);
+
+    background: #e5d5b8;
+
+    color: #873d42;
+    font-size: 19px;
+}
+
+/* ---------------------------------
+   MOBILE — CLOSING SPREAD
+--------------------------------- */
+
+@media (max-width: 650px) {
+
+    .chapter-closing-left,
+    .chapter-closing-right {
+        padding: 32px 18px 48px;
+    }
+
+    .chapter-closing-left .page-label,
+    .chapter-closing-right .page-label {
+        margin-top: 16px;
+        margin-bottom: 10px;
+
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    .chapter-closing-left #left-page-title {
+        margin-top: 12px;
+        font-size: 23px;
+    }
+
+    .chapter-closing-left #left-page-description,
+    .chapter-closing-left .closing-page-text {
+        max-width: 100%;
+        margin-top: 18px;
+        padding: 0 3px 8px;
+
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .chapter-closing-right .closing-page-title {
+        margin-top: 8px;
+        font-size: 21px;
+    }
+
+    .chapter-closing-right .closing-page-text {
+        max-width: 100%;
+        margin-top: 14px;
+        padding: 0 2px;
+
+        font-size: 15px;
+        line-height: 1.55;
+    }
+
+    .chapter-closing-right .closing-page-quote {
+        width: 95%;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        padding: 16px 5px 5px;
+
+        font-size: 14px;
+    }
+}
+
+/* ---------------------------------
+   SMALL MOBILE
+--------------------------------- */
+
+@media (max-width: 380px) {
+
+    .chapter-closing-left,
+    .chapter-closing-right {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .chapter-closing-left #left-page-title {
+        font-size: 20px;
+    }
+
+    .chapter-closing-left #left-page-description,
+    .chapter-closing-left .closing-page-text,
+    .chapter-closing-right .closing-page-text {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .chapter-closing-right .closing-page-title {
+        font-size: 19px;
+    }
+
+    .chapter-closing-right .closing-page-quote {
+        font-size: 12px;
+    }
+}
+
+
+/* =====================================================
+   CHAPTER 4 — TEXT SCROLL REFINEMENT
+===================================================== */
+
+/* LEFT PAGE — Thank You Text */
+
+.chapter-closing-left #left-page-description {
+    flex: 1 1 auto;
+    min-height: 0;
+
+    width: 100%;
+    max-width: 365px;
+
+    max-height: 340px;
+    margin: 22px auto 12px;
+    padding: 0 12px 12px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(135, 61, 66, 0.45) transparent;
+
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+}
+
+/* Chrome, Edge, Safari */
+
+.chapter-closing-left #left-page-description::-webkit-scrollbar,
+.chapter-closing-right .closing-page-text::-webkit-scrollbar {
+    width: 5px;
+}
+
+.chapter-closing-left #left-page-description::-webkit-scrollbar-track,
+.chapter-closing-right .closing-page-text::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chapter-closing-left #left-page-description::-webkit-scrollbar-thumb,
+.chapter-closing-right .closing-page-text::-webkit-scrollbar-thumb {
+    background: rgba(135, 61, 66, 0.35);
+    border-radius: 10px;
+}
+
+.chapter-closing-left #left-page-description::-webkit-scrollbar-thumb:hover,
+.chapter-closing-right .closing-page-text::-webkit-scrollbar-thumb:hover {
+    background: rgba(135, 61, 66, 0.65);
+}
+
+/* RIGHT PAGE — Until We Meet Again */
+
+.chapter-closing-right .closing-page-text {
+    flex: 1 1 auto;
+    min-height: 0;
+
+    max-height: 340px;
+    margin-top: 18px;
+    padding: 0 12px 12px;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: rgba(135, 61, 66, 0.45) transparent;
+
+    overscroll-behavior: contain;
+    scroll-behavior: smooth;
+}
+
+/* Keep the closing quotation in place */
+
+.chapter-closing-right .closing-page-quote {
+    flex: 0 0 auto;
+    margin-top: auto;
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .chapter-closing-left #left-page-description {
+        max-height: 330px;
+        margin-top: 18px;
+        padding: 0 8px 10px;
+    }
+
+    .chapter-closing-right .closing-page-text {
+        max-height: 330px;
+        margin-top: 14px;
+        padding: 0 8px 10px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .chapter-closing-left #left-page-description,
+    .chapter-closing-right .closing-page-text {
+        max-height: 300px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+
+/* =========================================
+   CHAPTER 2 — INDIVIDUAL PHOTO RATIOS
+========================================= */
+
+/* Dasar galeri Chapter 2 */
+.chapter-two-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    align-content: center;
+    justify-items: center;
+    gap: 14px;
+}
+
+/* Semua bingkai mengikuti rasio masing-masing */
+.chapter-two-gallery .memory-photo-frame {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-width: 0;
+    aspect-ratio: auto;
+    padding: 7px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Gambar tidak dipotong */
+.chapter-two-gallery .book-memory-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Foto 1 — 3:4 */
+.chapter-two-gallery .ratio-3-4 {
+    aspect-ratio: 3 / 4;
+}
+
+/* Foto 2 dan 3 — 4:5 */
+.chapter-two-gallery .ratio-4-5 {
+    aspect-ratio: 4 / 5;
+}
+
+/* Foto 4 — 1:1 */
+.chapter-two-gallery .ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+/* Foto 5 — 5:4 */
+.chapter-two-gallery .ratio-5-4 {
+    aspect-ratio: 5 / 4;
+}
+
+/* Foto ketiga pada halaman kiri berada di tengah */
+.chapter-two-gallery.gallery-left .memory-photo-frame:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    width: 62%;
+}
+
+/* =========================================
+   CHAPTER 2 — MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+    .chapter-two-gallery {
+        gap: 9px;
+        padding: 4px 3px 25px;
+        align-content: center;
+    }
+
+    .chapter-two-gallery .memory-photo-frame {
+        padding: 5px;
+    }
+
+    .chapter-two-gallery.gallery-left .memory-photo-frame:last-child:nth-child(odd) {
+        width: 65%;
+    }
+}
+
+
+/* =========================================
+   CHAPTER 2 — BALANCED PHOTO ARRANGEMENT
+========================================= */
+
+.chapter-two-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: max-content;
+    gap: 16px;
+
+    width: 100%;
+    height: auto;
+
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+
+    position: relative;
+    padding: 22px 10px;
+    box-sizing: border-box;
+}
+
+/* Reset posisi bingkai agar tidak bertumpuk */
+.chapter-two-gallery .memory-photo-frame {
+    position: relative !important;
+    inset: auto !important;
+
+    transform: none !important;
+    margin: 0 !important;
+
+    width: 100%;
+    height: auto;
+    min-width: 0;
+
+    box-sizing: border-box;
+    z-index: 1;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Dua foto pertama di halaman kiri */
+.chapter-two-gallery.gallery-left
+.memory-photo-frame:nth-child(1),
+.chapter-two-gallery.gallery-left
+.memory-photo-frame:nth-child(2) {
+    width: 94%;
+}
+
+/* Foto ketiga berada di tengah bawah */
+.chapter-two-gallery.gallery-left
+.memory-photo-frame:nth-child(3) {
+    grid-column: 1 / -1;
+    width: 48%;
+}
+
+/* Dua foto di halaman kanan */
+.chapter-two-gallery.gallery-right
+.memory-photo-frame {
+    width: 94%;
+}
+
+/* Gambar mengikuti rasio aslinya */
+.chapter-two-gallery .book-memory-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+/* =========================================
+   SUBTLE STORYBOOK DECORATIONS
+========================================= */
+
+.chapter-two-gallery::before {
+    content: "✧";
+    position: absolute;
+
+    top: 0;
+    right: 9%;
+
+    color: var(--garden-red);
+    font-size: 19px;
+    opacity: 0.55;
+
+    pointer-events: none;
+}
+
+.chapter-two-gallery::after {
+    content: "❦";
+    position: absolute;
+
+    bottom: 0;
+    left: 8%;
+
+    color: var(--garden-red);
+    font-size: 18px;
+    opacity: 0.5;
+
+    pointer-events: none;
+}
+
+/* Sentuhan hover yang lembut */
+.chapter-two-gallery .memory-photo-frame:hover {
+    transform: translateY(-4px) rotate(0deg) !important;
+    box-shadow: 0 9px 18px rgba(50, 35, 20, 0.18);
+    z-index: 5;
+}
+
+/* =========================================
+   CHAPTER 2 — MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .chapter-two-gallery {
+        gap: 10px;
+        padding: 18px 5px;
+    }
+
+    .chapter-two-gallery.gallery-left
+    .memory-photo-frame:nth-child(1),
+    .chapter-two-gallery.gallery-left
+    .memory-photo-frame:nth-child(2) {
+        width: 96%;
+    }
+
+    .chapter-two-gallery.gallery-left
+    .memory-photo-frame:nth-child(3) {
+        width: 55%;
+    }
+
+    .chapter-two-gallery.gallery-right
+    .memory-photo-frame {
+        width: 96%;
+    }
+
+    .chapter-two-gallery::before {
+        font-size: 15px;
+        right: 5%;
+    }
+
+    .chapter-two-gallery::after {
+        font-size: 15px;
+        left: 4%;
+    }
+}
+
+
+/* =========================================
+   CHAPTER 2 — RIGHT PAGE PHOTO LAYOUT
+   Two photos arranged vertically
+========================================= */
+
+.chapter-two-gallery.gallery-right {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: auto;
+    justify-items: center;
+    align-content: center;
+    gap: 14px;
+    padding: 10px 4px;
+}
+
+/* Kedua bingkai memiliki lebar yang sama */
+.chapter-two-gallery.gallery-right .memory-photo-frame {
+    width: 50%;
+    max-width: 230px;
+    height: auto;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Gambar mengikuti ukuran bingkai */
+.chapter-two-gallery.gallery-right .book-memory-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .chapter-two-gallery.gallery-right {
+        gap: 12px;
+        padding: 8px 3px 20px;
+    }
+
+    .chapter-two-gallery.gallery-right .memory-photo-frame {
+        width: 58%;
+        max-width: 230px;
+    }
+}
+
+
+/* =========================================
+   CHAPTER 2 — LEFT PAGE DESKTOP REFINEMENT
+========================================= */
+
+@media (min-width: 651px) {
+
+    /* Area galeri halaman kiri */
+    .chapter-two-gallery.gallery-left {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        justify-items: center;
+        align-content: center;
+        gap: 12px 8px;
+        padding: 8px 10px 16px;
+
+        /* Memberi ruang untuk judul chapter */
+        transform: translateY(55px);
+    }
+
+    /* Dua foto bagian atas */
+    .chapter-two-gallery.gallery-left .memory-photo-frame {
+        width: 75%;
+        max-width: 135px;
+        height: auto;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    /* Foto ketiga di tengah bawah */
+    .chapter-two-gallery.gallery-left
+    .memory-photo-frame:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        width: 46%;
+        max-width: 145px;
+    }
+
+}
+
+
+/* =========================================
+   CHAPTER 2 — LEFT PAGE FINAL ADJUSTMENT
+========================================= */
+
+@media (min-width: 651px) {
+
+    .chapter-two-gallery.gallery-left {
+        transform: translateY(5px);
+        row-gap: 8px;
+    }
+
+    /* Foto pertama dan kedua tetap */
+    .chapter-two-gallery.gallery-left
+    .memory-photo-frame:not(:last-child) {
+        width: 75%;
+        max-width: 135px;
+    }
+
+    /* Foto ketiga sedikit lebih kecil */
+    .chapter-two-gallery.gallery-left
+    .memory-photo-frame:last-child:nth-child(odd) {
+        width: 40%;
+        max-width: 125px;
+    }
+
+}
+
+
+/* =========================================
+   CHAPTER 3 — PHOTO LAYOUT
+========================================= */
+
+.chapter-three-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    align-content: center;
+    justify-items: center;
+    gap: 12px;
+    padding: 10px 8px;
+}
+
+.chapter-three-gallery .memory-photo-frame {
+    width: 85%;
+    max-width: 145px;
+    height: auto;
+    min-width: 0;
+    aspect-ratio: auto;
+    box-sizing: border-box;
+    padding: 7px;
+}
+
+.chapter-three-gallery .book-memory-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Individual image ratios */
+.chapter-three-gallery .ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.chapter-three-gallery .ratio-9-16 {
+    aspect-ratio: 9 / 16;
+}
+
+.chapter-three-gallery .ratio-5-7 {
+    aspect-ratio: 5 / 7;
+}
+
+.chapter-three-gallery .ratio-3-4 {
+    aspect-ratio: 3 / 4;
+}
+
+/* LEFT PAGE — VERTICAL */
+.chapter-three-gallery.gallery-left {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    align-content: center;
+    gap: 10px;
+}
+
+.chapter-three-gallery.gallery-left .memory-photo-frame {
+    width: 36%;
+    max-width: 135px;
+}
+
+/* RIGHT PAGE — SIDE BY SIDE */
+.chapter-three-gallery.gallery-right {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-items: center;
+    align-content: center;
+}
+
+/* Mobile: keep the vertical arrangement on the left */
+@media (max-width: 650px) {
+    .chapter-three-gallery {
+        gap: 9px;
+        padding: 8px 3px;
+    }
+
+    .chapter-three-gallery.gallery-left .memory-photo-frame {
+        width: 40%;
+        max-width: 135px;
+    }
+
+    .chapter-three-gallery .memory-photo-frame {
+        padding: 5px;
+    }
+}
+
+
+
+/* ===================================
+   CHAPTER 3 - PHOTO SIZE ADJUSTMENT
+=================================== */
+
+/* LEFT PAGE */
+.chapter-three-gallery.gallery-left {
+    gap: 12px;
+    padding: 8px 8px;
+}
+
+.chapter-three-gallery.gallery-left .memory-photo-frame {
+    width: 42%;
+    max-width: 175px;
+}
+
+/* RIGHT PAGE */
+.chapter-three-gallery.gallery-right {
+    gap: 14px;
+    padding: 10px 8px;
+}
+
+.chapter-three-gallery.gallery-right .memory-photo-frame {
+    width: 94%;
+    max-width: 190px;
+}
+
+/* KEEP IMAGES INSIDE THEIR FRAMES */
+.chapter-three-gallery .memory-photo-frame {
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.chapter-three-gallery .book-memory-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .chapter-three-gallery.gallery-left .memory-photo-frame {
+        width: 40%;
+        max-width: 165px;
+    }
+
+    .chapter-three-gallery.gallery-right .memory-photo-frame {
+        width: 94%;
+        max-width: 165px;
+    }
+}
+
+
+/* ===================================
+   CHAPTER 3 - PHOTO SIZE ADJUSTMENT
+=================================== */
+
+/* LEFT PAGE */
+.chapter-three-gallery.gallery-left {
+    gap: 12px;
+    padding: 8px 8px;
+}
+
+.chapter-three-gallery.gallery-left .memory-photo-frame {
+    width: 42%;
+    max-width: 155px;
+}
+
+/* RIGHT PAGE */
+.chapter-three-gallery.gallery-right {
+    gap: 14px;
+    padding: 10px 8px;
+}
+
+.chapter-three-gallery.gallery-right .memory-photo-frame {
+    width: 94%;
+    max-width: 170px;
+}
+
+/* KEEP IMAGES INSIDE THEIR FRAMES */
+.chapter-three-gallery .memory-photo-frame {
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.chapter-three-gallery .book-memory-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+    .chapter-three-gallery.gallery-left .memory-photo-frame {
+        width: 40%;
+        max-width: 145px;
+    }
+
+    .chapter-three-gallery.gallery-right .memory-photo-frame {
+        width: 94%;
+        max-width: 155px;
+    }
+}
+
+/* ===================================
+   CHAPTER 3 — LANDSCAPE PHOTO RATIO
+=================================== */
+
+.chapter-three-gallery .ratio-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+
+/* ===================================
+   CHAPTER 3 — ENLARGE LEFT PHOTOS
+   DESKTOP ONLY
+=================================== */
+
+@media (min-width: 769px) {
+
+    .chapter-three-gallery.gallery-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+
+        transform: translateY(-10px);
+    }
+
+    .chapter-three-gallery.gallery-left .memory-photo-frame {
+        width: 205px;
+        max-width: 42%;
+        flex: 0 0 auto;
+    }
+
+}
+
+
+/* ===================================
+   CHAPTER 3 — MOBILE LEFT GALLERY
+=================================== */
+
+@media (max-width: 768px) {
+
+    .chapter-three-gallery.gallery-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .chapter-three-gallery.gallery-left .memory-photo-frame {
+        width: 215px;
+        max-width: 65%;
+        flex: 0 0 auto;
+    }
+
+}
+
+/* ===================================
+   CHAPTER 4 — PHOTO RATIOS
+=================================== */
+
+.chapter-four-gallery .ratio-587-640 {
+    aspect-ratio: 587 / 640;
+}
+
+.chapter-four-gallery .ratio-281-320 {
+    aspect-ratio: 281 / 320;
+}
+
+
+/* =========================================
+   CHAPTER 4 — DESKTOP PHOTO LAYOUT
+   ORIGINAL IMAGE RATIOS
+========================================= */
+
+@media (min-width: 769px) {
+
+    /* Pertahankan susunan dua foto atas dan satu bawah */
+    .chapter-four-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: max-content;
+
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+
+        column-gap: 8px;
+        row-gap: 12px;
+
+        padding: 12px 8px;
+        box-sizing: border-box;
+    }
+
+    /* Ukuran dasar bingkai */
+    .chapter-four-gallery .memory-photo-frame {
+        width: 92%;
+        max-width: 195px;
+
+        height: auto;
+        min-width: 0;
+
+        padding: 7px;
+        margin: 0;
+
+        box-sizing: border-box;
+    }
+
+    /* Foto ketiga berada di tengah bawah */
+    .chapter-four-gallery .memory-photo-frame:nth-child(3) {
+        grid-column: 1 / -1;
+
+        width: 46%;
+        max-width: 175px;
+    }
+
+    /* Rasio foto 1 — memory-17 */
+    .chapter-four-gallery .ratio-587-640 {
+        aspect-ratio: 587 / 640;
+    }
+
+    /* Rasio foto 2 — memory-18 */
+    .chapter-four-gallery .ratio-1-1 {
+        aspect-ratio: 1 / 1;
+    }
+
+    /* Rasio foto 3 — memory-19 */
+    .chapter-four-gallery .ratio-4-5 {
+        aspect-ratio: 4 / 5;
+    }
+
+    /* Rasio foto 4 — memory-14 */
+    .chapter-four-gallery .ratio-4-3 {
+        aspect-ratio: 4 / 3;
+    }
+
+    /* Rasio foto 5 — memory-15 */
+    .chapter-four-gallery .ratio-1-1 {
+        aspect-ratio: 1 / 1;
+    }
+
+    /* Rasio foto 6 — memory-16 */
+    .chapter-four-gallery .ratio-281-320 {
+        aspect-ratio: 281 / 320;
+    }
+
+    /* Gambar tetap utuh di dalam bingkai */
+    .chapter-four-gallery .book-memory-image {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+}
+
+
+/* =========================================
+   CHAPTER 4 — MOBILE PHOTO RATIOS
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* Bingkai mengikuti rasio foto masing-masing */
+    .chapter-four-gallery .memory-photo-frame {
+        height: auto;
+        aspect-ratio: auto;
+
+        min-width: 0;
+        box-sizing: border-box;
+
+        overflow: hidden;
+    }
+
+    /* MEMORY 17 — 587:640 */
+    .chapter-four-gallery .ratio-587-640 {
+        aspect-ratio: 587 / 640;
+    }
+
+    /* MEMORY 18 — 1:1 */
+    .chapter-four-gallery .ratio-1-1 {
+        aspect-ratio: 1 / 1;
+    }
+
+    /* MEMORY 19 — 4:5 */
+    .chapter-four-gallery .ratio-4-5 {
+        aspect-ratio: 4 / 5;
+    }
+
+    /* MEMORY 14 — 4:3 */
+    .chapter-four-gallery .ratio-4-3 {
+        aspect-ratio: 4 / 3;
+    }
+
+    /* MEMORY 16 — 281:320 */
+    .chapter-four-gallery .ratio-281-320 {
+        aspect-ratio: 281 / 320;
+    }
+
+    /* Foto tidak terpotong dan tetap berada di dalam bingkai */
+    .chapter-four-gallery .book-memory-image {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        max-width: 100%;
+        max-height: 100%;
+
+        object-fit: contain;
+        object-position: center;
+    }
+
+}
+
+
+/* =========================================
+   CHAPTER 4 — FINAL LAYOUT FIX
+========================================= */
+
+/* RESET POSISI BINGKAI */
+.chapter-four-gallery .memory-photo-frame {
+    position: relative !important;
+    inset: auto !important;
+
+    transform: none !important;
+    margin: 0 !important;
+
+    height: auto;
+    min-width: 0;
+
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* GAMBAR TETAP DI DALAM BINGKAI */
+.chapter-four-gallery .book-memory-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+    object-position: center;
+}
+
+/* =========================================
+   DESKTOP — FIT INSIDE BOOK PAGE
+========================================= */
+
+@media (min-width: 769px) {
+
+    .chapter-four-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: max-content;
+
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+
+        gap: 8px;
+        padding: 6px 5px;
+    }
+
+    /* Dua foto bagian atas */
+    .chapter-four-gallery .memory-photo-frame {
+        width: 82%;
+        max-width: 150px;
+    }
+
+    /* Foto ketiga bagian bawah */
+    .chapter-four-gallery .memory-photo-frame:nth-child(3) {
+        grid-column: 1 / -1;
+
+        justify-self: center;
+
+        width: 40%;
+        max-width: 150px;
+    }
+
+}
+
+/* =========================================
+   MOBILE — CENTER BOTTOM PHOTO
+========================================= */
+
+@media (max-width: 768px) {
+
+    .chapter-four-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-items: center;
+        align-items: center;
+    }
+
+    /* KUNCI FOTO KETIGA DI TENGAH */
+    .chapter-four-gallery .memory-photo-frame:nth-child(3) {
+        grid-column: 1 / -1 !important;
+
+        justify-self: center !important;
+        align-self: center;
+
+        width: 46%;
+        max-width: 135px;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
+
+
+/* =========================================
+   ACCESS CODE — SHOW / HIDE BUTTON
+========================================= */
+
+.access-input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.access-input-wrapper #access-code {
+    width: 100%;
+    padding-right: 52px;
+}
+
+/* Eye button */
+.toggle-access-code {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: #b99b82;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.toggle-access-code:hover {
+    color: #d5a09a;
+    transform: translateY(-50%) scale(1.08);
+}
+
+.toggle-access-code:focus-visible {
+    outline: 1px solid #c18b78;
+    outline-offset: 4px;
+}
+
+.toggle-access-code svg {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+
+/* =========================================
+   FRONT COVER — MEMORY PHOTOGRAPH
+========================================= */
+
+/* Main Photo Frame */
+.cover-image-frame {
+    width: min(320px, 85%);
+    aspect-ratio: 4 / 3;
+
+    margin: 30px auto 25px;
+    padding: 10px;
+
+    background: #e5d5b8;
+    border: 1px solid #b99c71;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.4),
+        inset 0 0 0 1px rgba(89, 40, 46, 0.12);
+
+    overflow: hidden;
+}
+
+/* Uploaded Photograph */
+.front-cover-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    border: 1px solid rgba(89, 40, 46, 0.2);
+}
+
+/* Keep Hidden Image Invisible */
+.front-cover-image[hidden] {
+    display: none;
+}
+
+/* Placeholder */
+.cover-image-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #d6c5a7,
+            #bca887
+        );
+
+    color: #594b3a;
+    text-align: center;
+}
+
+.cover-image-placeholder span {
+    font-size: 42px;
+    color: #873d42;
+}
+
+.cover-image-placeholder p {
+    max-width: 170px;
+    padding: 0 8px;
+
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+/* Mobile Adjustment */
+@media (max-width: 600px) {
+
+    .cover-image-frame {
+        width: min(260px, 85%);
+        aspect-ratio: 4 / 3;
+
+        margin: 25px auto 22px;
+        padding: 8px;
+    }
+
+    .cover-image-placeholder span {
+        font-size: 35px;
+    }
+
+    .cover-image-placeholder p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   BACK COVER — PHOTO UPLOAD
+========================================= */
+
+.back-cover-photo-frame {
+    position: relative;
+    width: min(320px, 85%);
+    aspect-ratio: 4 / 3;
+    margin: 20px auto;
+    padding: 10px;
+    box-sizing: border-box;
+
+    background: #e5d5b8;
+    border: 1px solid #b99c71;
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.25),
+        inset 0 0 0 2px #f2e6cf;
+
+    overflow: hidden;
+}
+
+.back-cover-photo-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.back-cover-photo-frame img[hidden] {
+    display: none;
+}
+
+.back-cover-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    background: linear-gradient(145deg, #d6c5a7, #bca887);
+    color: #594b3a;
+    text-align: center;
+}
+
+.back-cover-placeholder[hidden] {
+    display: none;
+}
+
+/* Change Photo Button */
+.change-back-cover-button {
+    display: block;
+    width: fit-content;
+
+    margin: 18px auto;
+    padding: 11px 22px;
+
+    background: #344536;
+    color: #eee3cc;
+
+    border: 1px solid #a98a60;
+
+    font-family: Georgia, serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.change-back-cover-button:hover {
+    background: #873d42;
+    transform: translateY(-2px);
+}
+
+.change-back-cover-button:focus-visible {
+    outline: 2px solid #c18b78;
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .back-cover-photo-frame {
+        width: min(260px, 85%);
+        padding: 8px;
+    }
+
+    .change-back-cover-button {
+        padding: 10px 17px;
+        font-size: 10px;
+    }
+}
+
+/* =========================================
+   BACK COVER — INLINE PHOTO PREVIEW
+========================================= */
+
+/* Pastikan elemen tersembunyi benar-benar tidak tampil */
+.back-cover-photo-frame [hidden],
+.back-cover-preview-message[hidden],
+.back-cover-edit-actions[hidden],
+.change-back-cover-button[hidden] {
+    display: none !important;
+}
+
+/* Preview status */
+.back-cover-preview-message {
+    max-width: 300px;
+    margin: 14px auto;
+    padding: 10px 14px;
+
+    color: #594b3a;
+    background: rgba(229, 213, 184, 0.55);
+
+    border-left: 2px solid #873d42;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Preview action group */
+.back-cover-edit-actions {
+    width: min(320px, 90%);
+    margin: 16px auto 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+}
+
+/* Shared button style */
+.back-cover-edit-actions button {
+    min-height: 38px;
+    padding: 10px 15px;
+
+    border: 1px solid #a98a60;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+/* Choose another photo */
+.choose-another-cover-button {
+    width: 100%;
+
+    background: #e5d5b8;
+    color: #344536;
+}
+
+.choose-another-cover-button:hover {
+    background: #d6c5a7;
+    transform: translateY(-2px);
+}
+
+/* Cancel */
+.cancel-cover-change-button {
+    flex: 1;
+
+    background: transparent;
+    color: #873d42;
+    border-color: #873d42 !important;
+}
+
+.cancel-cover-change-button:hover {
+    background: #873d42;
+    color: #eee3cc;
+}
+
+/* Save changes */
+.confirm-cover-change-button {
+    flex: 1;
+
+    background: #344536;
+    color: #eee3cc;
+}
+
+.confirm-cover-change-button:hover {
+    background: #873d42;
+    transform: translateY(-2px);
+}
+
+/* Disabled button */
+.back-cover-edit-actions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Keyboard accessibility */
+.back-cover-edit-actions button:focus-visible {
+    outline: 2px solid #873d42;
+    outline-offset: 4px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .back-cover-preview-message {
+        width: 88%;
+        font-size: 14px;
+    }
+
+    .back-cover-edit-actions {
+        width: 90%;
+        gap: 8px;
+    }
+
+    .back-cover-edit-actions button {
+        padding: 9px 10px;
+        font-size: 10px;
+        letter-spacing: 0.8px;
+    }
+
+}
+
+
+/* =========================================
+   PHOTO LIGHTBOX
+   Vintage Storybook Gallery
+========================================= */
+
+.photo-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 70px minmax(0, 1fr) 70px;
+    grid-template-rows: 55px minmax(0, 1fr) 45px;
+
+    align-items: center;
+    justify-items: center;
+
+    padding: 20px;
+
+    background: rgba(15, 20, 15, 0.94);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    animation: lightboxFadeIn 0.3s ease;
+}
+
+/* Respect the hidden attribute */
+.photo-lightbox[hidden] {
+    display: none !important;
+}
+
+/* Opening animation */
+@keyframes lightboxFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* =========================================
+   LIGHTBOX IMAGE FRAME
+========================================= */
+
+.lightbox-image-frame {
+    grid-column: 2;
+    grid-row: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    min-height: 0;
+
+    padding: 12px;
+
+    box-sizing: border-box;
+
+    background: #e5d5b8;
+    border: 1px solid #a98a60;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.45),
+        inset 0 0 0 3px rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-image {
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    background: #d9c8aa;
+}
+
+/* =========================================
+   LIGHTBOX BUTTONS
+========================================= */
+
+.lightbox-close,
+.lightbox-previous,
+.lightbox-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    padding: 0;
+
+    border: 1px solid rgba(229, 213, 184, 0.65);
+    border-radius: 50%;
+
+    background: rgba(229, 213, 184, 0.1);
+    color: #eee3cc;
+
+    font-family: Georgia, serif;
+    font-size: 32px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-previous:hover,
+.lightbox-next:hover {
+    background: #e5d5b8;
+    color: #344536;
+    transform: scale(1.08);
+}
+
+/* Close button */
+.lightbox-close {
+    position: absolute;
+    top: 22px;
+    right: 25px;
+
+    z-index: 2;
+}
+
+/* Previous button */
+.lightbox-previous {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+/* Next button */
+.lightbox-next {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+/* =========================================
+   PHOTO COUNTER
+========================================= */
+
+.lightbox-counter {
+    grid-column: 2;
+    grid-row: 3;
+
+    margin: 0;
+
+    color: #e5d5b8;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+    font-style: italic;
+    letter-spacing: 2px;
+
+    text-align: center;
+}
+
+/* =========================================
+   BODY SCROLL LOCK
+========================================= */
+
+body.lightbox-open {
+    overflow: hidden;
+}
+
+/* =========================================
+   KEYBOARD FOCUS
+========================================= */
+
+.photo-lightbox button:focus-visible {
+    outline: 2px solid #e5d5b8;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .photo-lightbox {
+        grid-template-columns: 42px minmax(0, 1fr) 42px;
+        grid-template-rows: 55px minmax(0, 1fr) 45px;
+
+        gap: 5px;
+        padding: 12px 8px;
+    }
+
+    .lightbox-image-frame {
+        padding: 7px;
+    }
+
+    .lightbox-close,
+    .lightbox-previous,
+    .lightbox-next {
+        width: 36px;
+        height: 36px;
+
+        font-size: 25px;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+
+    .lightbox-counter {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================
+   LIGHTBOX — VINTAGE PHOTO FRAME
+========================================= */
+
+/* Main Lightbox Layout */
+
+.photo-lightbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 65px 90px 25px;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   FRAME THAT FOLLOWS PHOTO DIMENSIONS
+========================================= */
+
+.lightbox-image-frame {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 1 auto;
+
+    width: fit-content;
+    height: fit-content;
+
+    max-width: min(78vw, 1050px);
+    max-height: 70vh;
+
+    padding: 13px;
+
+    box-sizing: border-box;
+
+    background: #e9dcc2;
+
+    border: 1px solid #a98a60;
+
+    box-shadow:
+        0 18px 50px rgba(0, 0, 0, 0.48),
+        0 3px 8px rgba(0, 0, 0, 0.2),
+        inset 0 0 0 3px rgba(255, 255, 255, 0.35),
+        inset 0 0 0 4px rgba(169, 138, 96, 0.2);
+}
+
+/* Inner photograph */
+
+.lightbox-image {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: calc(78vw - 26px);
+    max-height: calc(70vh - 26px);
+
+    object-fit: contain;
+
+    background: #d9c8aa;
+}
+
+/* Subtle vintage corner ornaments */
+
+.lightbox-image-frame::before,
+.lightbox-image-frame::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: #a98a60;
+
+    font-family: Georgia, serif;
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+.lightbox-image-frame::before {
+    top: 3px;
+    left: 5px;
+}
+
+.lightbox-image-frame::after {
+    right: 5px;
+    bottom: 3px;
+}
+
+/* =========================================
+   PHOTO TITLE
+========================================= */
+
+.lightbox-title {
+    max-width: min(75vw, 700px);
+
+    margin: 5px 0 0;
+
+    color: #eee3cc;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 23px;
+    font-weight: 500;
+
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+/* =========================================
+   PHOTO CAPTION
+========================================= */
+
+.lightbox-caption {
+    max-width: min(75vw, 650px);
+
+    margin: -5px 0 0;
+
+    color: rgba(238, 227, 204, 0.78);
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.55;
+
+    text-align: center;
+    white-space: pre-line;
+}
+
+/* =========================================
+   PHOTO COUNTER
+========================================= */
+
+.lightbox-counter {
+    margin: 0;
+
+    color: #c5ad88;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 14px;
+
+    letter-spacing: 3px;
+}
+
+/* =========================================
+   NAVIGATION BUTTON POSITION
+========================================= */
+
+.lightbox-previous,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+}
+
+.lightbox-previous {
+    left: 25px;
+}
+
+.lightbox-next {
+    right: 25px;
+}
+
+.lightbox-previous:hover,
+.lightbox-next:hover {
+    transform: translateY(-50%) scale(1.08);
+}
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .photo-lightbox {
+        gap: 10px;
+
+        padding: 65px 45px 20px;
+    }
+
+    .lightbox-image-frame {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    height: fit-content;
+
+    max-width: 88vw;
+    max-height: 75vh;
+
+    padding: 13px;
+
+    background: var(--garden-paper);
+    border: 1px solid rgba(130, 105, 70, 0.7);
+
+    box-shadow:
+        0 0 0 5px rgba(229, 213, 184, 0.12),
+        0 15px 45px rgba(0, 0, 0, 0.45),
+        inset 0 0 12px rgba(90, 65, 40, 0.15);
+}
+
+.lightbox-image {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: calc(88vw - 26px);
+    max-height: calc(75vh - 26px);
+
+    object-fit: contain;
+}
+
+    .lightbox-title {
+        max-width: 85vw;
+
+        font-size: 20px;
+    }
+
+    .lightbox-caption {
+        max-width: 85vw;
+
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .lightbox-counter {
+        font-size: 12px;
+    }
+
+    .lightbox-previous {
+        left: 5px;
+    }
+
+    .lightbox-next {
+        right: 5px;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .photo-lightbox {
+        animation: none;
+    }
+
+}
+
+.standard-chapter-gallery .memory-photo-frame,
+.chapter-one-gallery .memory-photo-frame,
+.chapter-two-gallery .memory-photo-frame,
+.chapter-three-gallery .memory-photo-frame,
+.chapter-four-gallery .memory-photo-frame {
+
+    position: relative;
+
+    height: auto !important;
+    min-height: 0;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+
+/* =========================================
+   SESSION RESTORATION SCREEN
+========================================= */
+
+.session-screen {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 40px 24px;
+}
+
+.session-screen.hidden {
+    display: none;
+}
+
+.session-loading {
+    margin: 30px 0;
+
+    font-size: 30px;
+
+    color: var(--garden-cream);
+
+    animation: gardenBloom 1.8s ease-in-out infinite;
+}
+
+@keyframes gardenBloom {
+    0%, 100% {
+        opacity: 0.45;
+        transform: scale(0.9) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15) rotate(45deg);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .session-loading {
+        animation: none;
+    }
+}
+
