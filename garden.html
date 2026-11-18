@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Garden of Memories</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Garden CSS -->
+    <link rel="stylesheet" href="css/garden.css">
+</head>
+
+<body>
+
+    <!-- Main Container -->
+    <main class="garden-container">
+
+
+<!-- SESSION RESTORATION SCREEN -->
+<section id="session-screen" class="session-screen hidden" aria-live="polite">
+
+    <div class="garden-decoration">
+        <span>✿</span>
+        <span>❀</span>
+        <span>✿</span>
+    </div>
+
+    <p class="garden-subtitle">A PRIVATE COLLECTION</p>
+
+    <h1>Welcome Back</h1>
+
+    <p class="access-description">
+        Your garden is quietly opening.
+        Please wait while we restore your memories.
+    </p>
+
+    <div class="session-loading">
+        <span>✿</span>
+    </div>
+
+    <p class="garden-footer">
+        Some memories are always worth returning to.
+    </p>
+
+</section>
+
+        <!-- Access Screen -->
+        <section id="access-screen" class="access-screen">
+        
+            
+            <div class="garden-decoration">
+                <span>✿</span>
+                <span>❀</span>
+                <span>✿</span>
+            </div>
+
+            <p class="garden-subtitle">A PRIVATE COLLECTION</p>
+
+            <h1>A Garden of Memories</h1>
+
+            <p class="access-description">
+                Some memories are too precious to be forgotten.
+                Enter the garden to discover them.
+            </p>
+
+            <form id="access-form">
+
+                <div class="access-input-wrapper">
+
+    <input
+        type="password"
+        id="access-code"
+        placeholder="Enter your access code"
+        autocomplete="off"
+        required
+    >
+
+    <button
+        type="button"
+        id="toggle-access-code"
+        class="toggle-access-code"
+        aria-label="Show access code"
+        aria-pressed="false"
+        title="Show access code"
+    >
+        <svg
+            class="eye-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+    </button>
+
+</div>
+
+                <button type="submit" id="access-button">
+                    Enter the Garden
+                </button>
+
+            </form>
+
+            <p id="access-message" class="access-message"></p>
+
+            <p class="garden-footer">
+                A little garden, filled with memories.
+            </p>
+
+        </section>
+
+
+<!-- Gallery Screen -->
+<section id="gallery-screen" class="gallery-screen hidden">
+
+    <!-- BOOK COVER -->
+    <div id="book-cover" class="book-cover">
+
+        <div class="cover-ornament cover-ornament-top">
+            ❧ ✿ ❧
+        </div>
+
+        <p class="cover-subtitle">A PRIVATE COLLECTION</p>
+
+       
+<div class="cover-image-frame">
+
+    <!-- FRONT COVER PHOTO -->
+    <img
+        id="front-cover-image"
+        class="front-cover-image"
+        src=""
+        alt="A special memory on the front cover"
+        hidden
+    >
+
+    <!-- PLACEHOLDER -->
+    <div
+        id="front-cover-placeholder"
+        class="cover-image-placeholder"
+    >
+        <span>✿</span>
+        <p>A special picture will bloom here</p>
+    </div>
+
+</div>
+
+
+        <h1 class="cover-title">
+            A Garden of Memories
+        </h1>
+
+        <p class="cover-description">
+            A little book filled with moments worth keeping.
+        </p>
+
+        <div class="cover-rose-decoration">
+            ❧  🌹  ❧
+        </div>
+
+        <button id="open-book-button" class="open-book-button">
+            OPEN THE BOOK
+        </button>
+
+        <p class="cover-footer">
+            A story written in little moments
+        </p>
+
+    </div>
+
+
+    
+<!-- BOOK CONTENT -->
+<div id="book-content" class="book-content hidden">
+
+    <div class="open-book">
+
+        <!-- LEFT PAGE -->
+        <div class="book-page left-page">
+
+            <div class="page-decoration">❧</div>
+
+            <p class="page-label">A GARDEN OF MEMORIES</p>
+
+            <h2 id="left-page-title">
+                The Beginning
+            </h2>
+
+            <div class="page-divider">✿</div>
+
+            <p id="left-page-description">
+                Every beautiful story has a beginning.
+            </p>
+
+            <div class="page-rose-decoration">
+                🌹
+            </div>
+
+            <p class="page-number">01</p>
+
+        </div>
+
+
+        <!-- RIGHT PAGE -->
+        <div class="book-page right-page">
+
+            <div class="page-decoration">❧</div>
+
+            <div id="right-page-content" class="right-page-content" aria-live="polite">
+
+                <p class="page-label">A LITTLE MEMORY</p>
+
+                <div class="page-placeholder">
+                    <span>✿</span>
+                    <p>Memories will appear here</p>
+                </div>
+
+            </div>
+
+            <p class="page-number">02</p>
+
+        </div>
+
+    </div>
+
+    <!-- TEMPORARY CHAPTER CONTAINER -->
+<div id="chapters-container" class="chapters-container hidden">
+</div>
+
+<!-- BACK COVER FILE INPUT -->
+<input
+    type="file"
+    id="back-cover-file-input"
+    accept="image/jpeg,image/png,image/webp"
+    hidden
+>
+
+    <!-- BOOK NAVIGATION -->
+    <div class="book-navigation">
+
+        <button id="previous-page-button" disabled>
+            ← PREVIOUS
+        </button>
+
+        <span id="page-indicator" role="status" aria-live="polite">
+            PAGE 1 / 1
+        </span>
+
+        <button id="next-page-button">
+            NEXT →
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+    </main>
+
+    <!-- Garden JavaScript -->
+    <script src="js/garden.js"></script>
+
+</body>
+
+</html>
